@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/wicio_dhl4iwy/Documents/GitHub/Submanager-ready/app/api/logout/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\n\r\nexport async function POST() {\r\n  const out = NextResponse.json({ ok: true });\r\n  out.cookies.set(\"submanager_session\", \"\", { path: \"/\", maxAge: 0 });\r\n  return out;\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe;IACpB,MAAM,MAAM,gJAAY,CAAC,IAAI,CAAC;QAAE,IAAI;IAAK;IACzC,IAAI,OAAO,CAAC,GAAG,CAAC,sBAAsB,IAAI;QAAE,MAAM;QAAK,QAAQ;IAAE;IACjE,OAAO;AACT"}}]
+}
