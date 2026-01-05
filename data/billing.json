@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "users": {
+    "ngsfdadas": {
+      "plan": "basic",
+      "active": true,
+      "since": "2026-01-04T15:53:00.751Z",
+      "updatedAt": "2026-01-04T15:53:00.751Z"
+    },
+    "kuast": {
+      "plan": "pro",
+      "active": true,
+      "since": "2026-01-05T11:14:00.303Z",
+      "updatedAt": "2026-01-05T11:14:00.303Z"
+    }
+  }
+}

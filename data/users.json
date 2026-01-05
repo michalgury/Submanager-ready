@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": "7f4069b59314d3d63730424360694cc3",
+      "username": "kuast",
+      "passwordHash": "scrypt$MMNR/SV0HVfY1x3sH0P/lA==$1yJj3RpY3h1p5JAtQdJnycx35by+6knU3S/4Uzw5ZcJ5cG1Ywc4uNg2+5DylxcnvEVxwREv35GVnGn545EMclg==",
+      "createdAt": "2026-01-05T11:13:57.518Z",
+      "updatedAt": "2026-01-05T11:13:57.518Z"
+    }
+  ]
+}
