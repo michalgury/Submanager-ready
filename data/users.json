@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": "7f4069b59314d3d63730424360694cc3",
+      "username": "kuast",
+      "passwordHash": "scrypt$MMNR/SV0HVfY1x3sH0P/lA==$1yJj3RpY3h1p5JAtQdJnycx35by+6knU3S/4Uzw5ZcJ5cG1Ywc4uNg2+5DylxcnvEVxwREv35GVnGn545EMclg==",
+      "createdAt": "2026-01-05T11:13:57.518Z",
+      "updatedAt": "2026-01-05T11:13:57.518Z"
+    },
+    {
+      "id": "981aeae00effdf3a00a29700bd730ebb",
+      "username": "michalek12",
+      "passwordHash": "scrypt$xHE9f1i7a3xMYoU5OXy0hA==$yqvIZcXZsDCyMJnWoBhR5S1B424va/J8wXyUIevXU77KSnsbSfN/3JB6/eZi0tWtlcbQtEgz1E3tAh5/CzxnSg==",
+      "createdAt": "2026-01-05T23:39:58.031Z",
+      "updatedAt": "2026-01-05T23:39:58.031Z"
+    },
+    {
+      "id": "bd73dcf30cc4dbab4e62bd954679d8cc",
+      "username": "michalek",
+      "passwordHash": "scrypt$kQjwYq8z3Q1KO8j7NICTMA==$aFAHAKdIcHIp+hUBmIJ6mHnRc/ruGoPkF53IwnvWn7k1saOaIbxu3BsfOsloshdzyVzDhxZ/txQ92ema/4q53w==",
+      "createdAt": "2026-01-05T23:40:29.772Z",
+      "updatedAt": "2026-01-05T23:40:29.772Z"
+    },
+    {
+      "id": "e95f10fb7ba9dd796509c0db3f1204fb",
+      "username": "michal",
+      "passwordHash": "scrypt$WwTAkC/nEU4b8TYwH2axug==$7DGLowOhLmORzpJLLNFvTz6aXUIRfuJe35QgB1wc2TP/ry+0kdRVO8DxsjoSXunKwiJ03eNC38I1y5gHEeleSg==",
+      "createdAt": "2026-01-05T23:43:54.500Z",
+      "updatedAt": "2026-01-05T23:43:54.500Z"
+    },
+    {
+      "id": "0ed9ad579a5edd58d0a0445bd3ab2950",
+      "username": "123456",
+      "passwordHash": "scrypt$gGDWOQ2OJyonsEeEmNdFxw==$zbR04EL9zwqxkVzhfW1B+WICswHUneKuVgc1ce/PASKz1w8H4WeRXTdiZIKtENpRnjhJeIuS/gSoP4MhRKfHlw==",
+      "createdAt": "2026-01-05T23:51:52.423Z",
+      "updatedAt": "2026-01-05T23:51:52.423Z"
+    },
+    {
+      "id": "98b50cab0a3a9fcb8bba3e02a1e9d1e2",
+      "username": "asdfg",
+      "passwordHash": "scrypt$/XKxEDb+poqwwdWTvGYx8A==$3J2e0cE0A04+jJ/MHBuhmTSG8tsz4XB3B8Iu359IPZC5w+yx/uOWHjiU99anxgzdHsaWNS04bp7V3a35OLzo4g==",
+      "createdAt": "2026-01-05T23:54:43.987Z",
+      "updatedAt": "2026-01-05T23:54:43.987Z"
+    },
+    {
+      "id": "e42df2ee4db22271aa99bfb46f7f1d5d",
+      "username": "lkj",
+      "passwordHash": "scrypt$Wfxmh7N2i/OJv7UNjM/iYg==$VTORcrkb2j7s+dMKN9INQyibkW6OsyOtUNPi4dp+cK/q/jvjxCjAe3OAXluyr8H99B4GTxnwoJnpCP930c/vnw==",
+      "createdAt": "2026-01-05T23:57:59.356Z",
+      "updatedAt": "2026-01-05T23:57:59.356Z"
+    },
+    {
+      "id": "5e3fb45841dae67f250dfff342bfb241",
+      "username": "098",
+      "passwordHash": "scrypt$7Y0070azfzaVjqxHQbsBEA==$+8ngr5Ix/TxCUj26JWvCgf9FYTIPezfdlffg0bx+khtfYP/viEOMUdyGSHeugddSm3JuLXRDRwCFGanz+gog9w==",
+      "createdAt": "2026-01-06T00:55:13.500Z",
+      "updatedAt": "2026-01-06T00:55:13.500Z"
+    }
+  ]
+}

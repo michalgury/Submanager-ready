@@ -1,0 +1,14 @@
+{
+  "/api/me/route": "app/api/me/route.js",
+  "/api/billing/status/route": "app/api/billing/status/route.js",
+  "/api/logout/route": "app/api/logout/route.js",
+  "/api/register/route": "app/api/register/route.js",
+  "/api/login/route": "app/api/login/route.js",
+  "/api/billing/checkout/route": "app/api/billing/checkout/route.js",
+  "/api/billing/activate/route": "app/api/billing/activate/route.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/subskrypcja/page": "app/subskrypcja/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/register/page": "app/register/page.js"
+}
