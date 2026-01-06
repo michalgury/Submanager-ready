@@ -1,8 +1,0 @@
-{
-  "/api/me/route": "app/api/me/route.js",
-  "/api/billing/status/route": "app/api/billing/status/route.js",
-  "/page": "app/page.js",
-  "/kalendarz/page": "app/kalendarz/page.js",
-  "/subskrypcja/page": "app/subskrypcja/page.js",
-  "/profile/page": "app/profile/page.js"
-}
