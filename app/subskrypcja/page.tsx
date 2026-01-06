@@ -1,4 +1,5 @@
 "use client";
+import UsageCostCalculator from "../components/UsageCostCalculator";
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -8,7 +9,9 @@ import PlansPaywall from "../components/PlansPaywall";
 import SubManagerFull from "./SubManagerFull";
 
 type Plan = "none" | "basic" | "pro" | "elite";
-type PlanStatus = { ok: true; plan: Plan; active: boolean } | { ok: false; error?: string };
+type PlanStatus =
+  | { ok: true; plan: Plan; active: boolean }
+  | { ok: false; error?: string };
 
 export default function SubskrypcjaPage() {
   const sp = useSearchParams();

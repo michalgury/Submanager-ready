@@ -1,7 +1,10 @@
 "use client";
+import WatchingCostCalculator from "./WatchingCostCalculator";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+
+// reszta importów i kod komponentu...
 
 import {
   Currency,
@@ -29,8 +32,18 @@ import {
   type Profile,
 } from "../lib/profilesStore";
 
-import { loadSettings, saveSettings, type Settings } from "../lib/settingsStore";
-import { loadPayments, savePayments, addPayment, type PaymentEntry } from "../lib/paymentsStore";
+import {
+  loadSettings,
+  saveSettings,
+  type Settings,
+} from "../lib/settingsStore";
+import {
+  loadPayments,
+  savePayments,
+  addPayment,
+  type PaymentEntry,
+} from "../lib/paymentsStore";
+import { transferableAbortSignal } from "util";
 
 type StatusFilter = "all" | "active" | "inactive" | "expiring7" | "archived";
 type SortBy = "nextRenewal" | "name" | "priceDesc" | "priceAsc";
@@ -65,7 +78,10 @@ function csvEscape(value: unknown): string {
 
 function formatMoney(value: number, currency: Currency) {
   try {
-    return new Intl.NumberFormat("pl-PL", { style: "currency", currency }).format(value);
+    return new Intl.NumberFormat("pl-PL", {
+      style: "currency",
+      currency,
+    }).format(value);
   } catch {
     return `${value.toFixed(2)} ${currency}`;
   }
@@ -84,11 +100,30 @@ function toISODate(d: Date): string {
 }
 
 function badgeForDays(d: number) {
-  if (d < 0) return { text: `Po terminie ${Math.abs(d)} dni`, cls: "bg-red-100 text-red-900 ring-1 ring-red-200" };
-  if (d === 0) return { text: "Dziś", cls: "bg-amber-100 text-amber-900 ring-1 ring-amber-200" };
-  if (d <= 3) return { text: `Za ${d} dni`, cls: "bg-amber-100 text-amber-900 ring-1 ring-amber-200" };
-  if (d <= 7) return { text: `Za ${d} dni`, cls: "bg-yellow-100 text-yellow-900 ring-1 ring-yellow-200" };
-  return { text: `Za ${d} dni`, cls: "bg-zinc-100 text-zinc-900 ring-1 ring-zinc-200" };
+  if (d < 0)
+    return {
+      text: `Po terminie ${Math.abs(d)} dni`,
+      cls: "bg-red-100 text-red-900 ring-1 ring-red-200",
+    };
+  if (d === 0)
+    return {
+      text: "Dziś",
+      cls: "bg-amber-100 text-amber-900 ring-1 ring-amber-200",
+    };
+  if (d <= 3)
+    return {
+      text: `Za ${d} dni`,
+      cls: "bg-amber-100 text-amber-900 ring-1 ring-amber-200",
+    };
+  if (d <= 7)
+    return {
+      text: `Za ${d} dni`,
+      cls: "bg-yellow-100 text-yellow-900 ring-1 ring-yellow-200",
+    };
+  return {
+    text: `Za ${d} dni`,
+    cls: "bg-zinc-100 text-zinc-900 ring-1 ring-zinc-200",
+  };
 }
 
 function normName(s: string) {
@@ -121,7 +156,7 @@ function mergeTwo(base: Subscription, incoming: Subscription): Subscription {
   const mergedNotes =
     base.notes && incoming.notes && base.notes !== incoming.notes
       ? `${base.notes}\n---\n${incoming.notes}`
-      : (incoming.notes ?? base.notes);
+      : incoming.notes ?? base.notes;
 
   return {
     ...base,
@@ -156,7 +191,9 @@ function Modal(props: {
           </button>
         </div>
         <div className="px-5 py-4">{props.children}</div>
-        {props.footer ? <div className="border-t px-5 py-4">{props.footer}</div> : null}
+        {props.footer ? (
+          <div className="border-t px-5 py-4">{props.footer}</div>
+        ) : null}
       </div>
     </div>
   );
@@ -164,7 +201,13 @@ function Modal(props: {
 
 function IconUser() {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg
+      viewBox="0 0 24 24"
+      className="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
       <path d="M20 21a8 8 0 0 0-16 0" />
       <circle cx="12" cy="7" r="4" />
     </svg>
@@ -173,7 +216,13 @@ function IconUser() {
 
 function IconChevron() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
       <path d="M6 9l6 6 6-6" />
     </svg>
   );
@@ -206,18 +255,29 @@ export default function DashboardPage() {
   const [editorOpen, setEditorOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const [deleteConfirm, setDeleteConfirm] = useState<{ open: boolean; id: string | null }>({
+  const [deleteConfirm, setDeleteConfirm] = useState<{
+    open: boolean;
+    id: string | null;
+  }>({
     open: false,
     id: null,
   });
 
-  const [undo, setUndo] = useState<{ item: Subscription; index: number; expiresAt: number } | null>(null);
+  const [undo, setUndo] = useState<{
+    item: Subscription;
+    index: number;
+    expiresAt: number;
+  } | null>(null);
 
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [importModal, setImportModal] = useState<{
     open: boolean;
     incoming: Subscription[];
-    dupAgainstExisting: Array<{ incomingId: string; existingId: string; existingName: string }>;
+    dupAgainstExisting: Array<{
+      incomingId: string;
+      existingId: string;
+      existingName: string;
+    }>;
     report: string[];
   }>({
     open: false,
@@ -356,7 +416,8 @@ export default function DashboardPage() {
         s.name.toLowerCase().includes(normalizedQuery) ||
         (s.category ?? "").toLowerCase().includes(normalizedQuery);
 
-      const matchesCurrency = currency === "ALL" ? true : s.currency === currency;
+      const matchesCurrency =
+        currency === "ALL" ? true : s.currency === currency;
 
       let matchesStatus = true;
       if (status === "active") matchesStatus = isActive && !isArchived;
@@ -366,10 +427,27 @@ export default function DashboardPage() {
 
       const visibleArchived = showArchived ? true : !isArchived;
 
-      return { s, next, days: d, isArchived, isActive, expiring7, matchesQuery, matchesCurrency, matchesStatus, visibleArchived };
+      return {
+        s,
+        next,
+        days: d,
+        isArchived,
+        isActive,
+        expiring7,
+        matchesQuery,
+        matchesCurrency,
+        matchesStatus,
+        visibleArchived,
+      };
     });
 
-    const filtered = enriched.filter((x) => x.matchesQuery && x.matchesCurrency && x.matchesStatus && x.visibleArchived);
+    const filtered = enriched.filter(
+      (x) =>
+        x.matchesQuery &&
+        x.matchesCurrency &&
+        x.matchesStatus &&
+        x.visibleArchived
+    );
 
     const sorted = [...filtered].sort((a, b) => {
       if (sortBy === "name") return a.s.name.localeCompare(b.s.name, "pl");
@@ -392,19 +470,28 @@ export default function DashboardPage() {
     const active = enriched.filter((x) => x.isActive);
     const exp7 = enriched.filter((x) => x.expiring7);
 
-    const totalsByCurrency: Record<Currency, number> = { PLN: 0, EUR: 0, USD: 0 };
+    const totalsByCurrency: Record<Currency, number> = {
+      PLN: 0,
+      EUR: 0,
+      USD: 0,
+    };
     for (const x of active) {
       const m = monthlyEquivalent(x.s);
       if (m !== null) totalsByCurrency[x.s.currency] += m;
     }
 
     // category totals (monthly eq)
-    const catByCurrency: Record<Currency, Record<string, number>> = { PLN: {}, EUR: {}, USD: {} };
+    const catByCurrency: Record<Currency, Record<string, number>> = {
+      PLN: {},
+      EUR: {},
+      USD: {},
+    };
     for (const x of active) {
       const m = monthlyEquivalent(x.s);
       if (m === null) continue;
-      const cat = (x.s.category?.trim() || "Bez kategorii");
-      catByCurrency[x.s.currency][cat] = (catByCurrency[x.s.currency][cat] || 0) + m;
+      const cat = x.s.category?.trim() || "Bez kategorii";
+      catByCurrency[x.s.currency][cat] =
+        (catByCurrency[x.s.currency][cat] || 0) + m;
     }
 
     const nearest = active
@@ -422,12 +509,18 @@ export default function DashboardPage() {
     // notifications
     const notifyDays = settings?.notifyDays ?? 3;
     const dueSoon = active
-      .filter((x) => x.next && x.days !== null && x.days >= 0 && x.days <= notifyDays)
+      .filter(
+        (x) => x.next && x.days !== null && x.days >= 0 && x.days <= notifyDays
+      )
       .sort((a, b) => (a.days ?? 999999) - (b.days ?? 999999))
       .slice(0, 8);
 
     // cashflow horizon: list events (date + amount)
-    const horizonEvents: Array<{ dateISO: string; s: Subscription; amount: number | null }> = [];
+    const horizonEvents: Array<{
+      dateISO: string;
+      s: Subscription;
+      amount: number | null;
+    }> = [];
     for (const x of active) {
       let next = computeNextRenewalDate(x.s, now);
       if (!next) continue;
@@ -439,11 +532,17 @@ export default function DashboardPage() {
       let guard = 0;
       while (next.getTime() <= limit.getTime() && guard++ < 400) {
         const iso = toISODate(next);
-        horizonEvents.push({ dateISO: iso, s: x.s, amount: parsePriceToNumber(x.s.price) });
+        horizonEvents.push({
+          dateISO: iso,
+          s: x.s,
+          amount: parsePriceToNumber(x.s.price),
+        });
         // następny po tym dniu
         const nextProbe = new Date(next);
         nextProbe.setDate(nextProbe.getDate() + 1);
-        next = computeNextRenewalDate(x.s, nextProbe) ?? new Date(limit.getTime() + 1);
+        next =
+          computeNextRenewalDate(x.s, nextProbe) ??
+          new Date(limit.getTime() + 1);
       }
     }
 
@@ -462,7 +561,15 @@ export default function DashboardPage() {
       horizonDays: upcomingH,
       notifyDays,
     };
-  }, [items, normalizedQuery, currency, status, sortBy, showArchived, settings]);
+  }, [
+    items,
+    normalizedQuery,
+    currency,
+    status,
+    sortBy,
+    showArchived,
+    settings,
+  ]);
 
   // ====== budżet ======
   const budgetState = useMemo(() => {
@@ -470,10 +577,28 @@ export default function DashboardPage() {
     if (!s) return null;
 
     const budgets = s.budgets || {};
-    const out: Record<Currency, { budget: number; used: number; over: boolean; pct: number }> = {
-      PLN: { budget: Number(budgets.PLN ?? 0) || 0, used: computed.totalsByCurrency.PLN, over: false, pct: 0 },
-      EUR: { budget: Number(budgets.EUR ?? 0) || 0, used: computed.totalsByCurrency.EUR, over: false, pct: 0 },
-      USD: { budget: Number(budgets.USD ?? 0) || 0, used: computed.totalsByCurrency.USD, over: false, pct: 0 },
+    const out: Record<
+      Currency,
+      { budget: number; used: number; over: boolean; pct: number }
+    > = {
+      PLN: {
+        budget: Number(budgets.PLN ?? 0) || 0,
+        used: computed.totalsByCurrency.PLN,
+        over: false,
+        pct: 0,
+      },
+      EUR: {
+        budget: Number(budgets.EUR ?? 0) || 0,
+        used: computed.totalsByCurrency.EUR,
+        over: false,
+        pct: 0,
+      },
+      USD: {
+        budget: Number(budgets.USD ?? 0) || 0,
+        used: computed.totalsByCurrency.USD,
+        over: false,
+        pct: 0,
+      },
     };
 
     for (const c of ["PLN", "EUR", "USD"] as Currency[]) {
@@ -521,7 +646,11 @@ export default function DashboardPage() {
 
     const candidates = Array.from(map.values());
 
-    const savingsByCurrency: Record<Currency, number> = { PLN: 0, EUR: 0, USD: 0 };
+    const savingsByCurrency: Record<Currency, number> = {
+      PLN: 0,
+      EUR: 0,
+      USD: 0,
+    };
     for (const x of candidates) {
       const m = monthlyEquivalent(x);
       if (m !== null) savingsByCurrency[x.currency] += m;
@@ -579,7 +708,9 @@ export default function DashboardPage() {
     setError("");
     const found = items.find((x) => x.id === id);
     if (!found) {
-      setError("Nie znaleziono rekordu do edycji (możliwe rozjechanie danych).");
+      setError(
+        "Nie znaleziono rekordu do edycji (możliwe rozjechanie danych)."
+      );
       return;
     }
     setEditingId(id);
@@ -594,12 +725,16 @@ export default function DashboardPage() {
     if (p === null || p < 0) return "Cena musi być liczbą ≥ 0.";
     if (d.billingCycle === "custom") {
       const cd = Number(d.cycleDays);
-      if (!Number.isFinite(cd) || cd <= 0) return "Dla niestandardowej subskrypcji podaj Cycle Days > 0.";
+      if (!Number.isFinite(cd) || cd <= 0)
+        return "Dla niestandardowej subskrypcji podaj Cycle Days > 0.";
     }
     return null;
   }
 
-  function applyPriceHistory(existing: Subscription | null, updated: Subscription): Subscription {
+  function applyPriceHistory(
+    existing: Subscription | null,
+    updated: Subscription
+  ): Subscription {
     const pNew = parsePriceToNumber(updated.price);
     if (pNew === null) return updated;
 
@@ -609,7 +744,12 @@ export default function DashboardPage() {
     if (!existing) {
       const ph = updated.priceHistory ?? [];
       if (!ph.length) {
-        return { ...updated, priceHistory: [{ price: pNew, currency: updated.currency, at: nowISO }] };
+        return {
+          ...updated,
+          priceHistory: [
+            { price: pNew, currency: updated.currency, at: nowISO },
+          ],
+        };
       }
       return updated;
     }
@@ -622,7 +762,12 @@ export default function DashboardPage() {
 
     const ph = [...(existing.priceHistory ?? [])];
     // jeśli historia pusta, dopisz stary punkt
-    if (!ph.length) ph.push({ price: pOld, currency: existing.currency, at: existing.updatedAt ?? existing.createdAt ?? nowISO });
+    if (!ph.length)
+      ph.push({
+        price: pOld,
+        currency: existing.currency,
+        at: existing.updatedAt ?? existing.createdAt ?? nowISO,
+      });
     ph.push({ price: pNew, currency: updated.currency, at: nowISO });
 
     return { ...updated, priceHistory: ph.slice(-12) };
@@ -637,7 +782,11 @@ export default function DashboardPage() {
     setError("");
 
     const nowISO = new Date().toISOString();
-    const baseFinal: Subscription = { ...draft, updatedAt: nowISO, createdAt: draft.createdAt ?? nowISO };
+    const baseFinal: Subscription = {
+      ...draft,
+      updatedAt: nowISO,
+      createdAt: draft.createdAt ?? nowISO,
+    };
 
     setItems((prev) => {
       const idx = prev.findIndex((x) => x.id === (editingId ?? baseFinal.id));
@@ -647,9 +796,16 @@ export default function DashboardPage() {
 
       // DUPE CHECK tylko przy dodawaniu
       if (idx === -1 && !editingId) {
-        const matches = prev.filter((x) => !x.archived && isProbableDuplicate(x, final));
+        const matches = prev.filter(
+          (x) => !x.archived && isProbableDuplicate(x, final)
+        );
         if (matches.length) {
-          setDupeModal({ open: true, candidate: final, matches, selectedId: matches[0].id });
+          setDupeModal({
+            open: true,
+            candidate: final,
+            matches,
+            selectedId: matches[0].id,
+          });
           return prev; // jeszcze nie zapisujemy
         }
       }
@@ -677,7 +833,12 @@ export default function DashboardPage() {
       return next;
     });
 
-    setDupeModal({ open: false, candidate: null, matches: [], selectedId: null });
+    setDupeModal({
+      open: false,
+      candidate: null,
+      matches: [],
+      selectedId: null,
+    });
     setToast("Scalono z istniejącą subskrypcją (duplikat).");
   }
 
@@ -685,13 +846,22 @@ export default function DashboardPage() {
     const candidate = dupeModal.candidate;
     if (!candidate) return;
     setItems((prev) => [candidate, ...prev]);
-    setDupeModal({ open: false, candidate: null, matches: [], selectedId: null });
+    setDupeModal({
+      open: false,
+      candidate: null,
+      matches: [],
+      selectedId: null,
+    });
     setToast("Dodano mimo podobieństwa (pozostawiono obie).");
   }
 
   function toggleArchive(id: string) {
     setItems((prev) =>
-      prev.map((x) => (x.id === id ? { ...x, archived: !x.archived, updatedAt: new Date().toISOString() } : x))
+      prev.map((x) =>
+        x.id === id
+          ? { ...x, archived: !x.archived, updatedAt: new Date().toISOString() }
+          : x
+      )
     );
   }
 
@@ -728,15 +898,37 @@ export default function DashboardPage() {
   }
 
   function exportJson() {
-    const payload = { version: 2, exportedAt: new Date().toISOString(), profileId, items };
-    const filename = `submanager-${profileId}-backup-${new Date().toISOString().slice(0, 10)}.json`;
-    downloadText(filename, JSON.stringify(payload, null, 2), "application/json");
+    const payload = {
+      version: 2,
+      exportedAt: new Date().toISOString(),
+      profileId,
+      items,
+    };
+    const filename = `submanager-${profileId}-backup-${new Date()
+      .toISOString()
+      .slice(0, 10)}.json`;
+    downloadText(
+      filename,
+      JSON.stringify(payload, null, 2),
+      "application/json"
+    );
   }
 
   function exportCsv() {
     const headers = [
-      "id","name","price","currency","billingCycle","cycleDays","startDate","endDate",
-      "subscribed","archived","category","usage","notes"
+      "id",
+      "name",
+      "price",
+      "currency",
+      "billingCycle",
+      "cycleDays",
+      "startDate",
+      "endDate",
+      "subscribed",
+      "archived",
+      "category",
+      "usage",
+      "notes",
     ];
     const sep = ";";
 
@@ -755,11 +947,15 @@ export default function DashboardPage() {
         s.category ?? "",
         s.usage ?? "unknown",
         s.notes ?? "",
-      ].map(csvEscape).join(sep)
+      ]
+        .map(csvEscape)
+        .join(sep)
     );
 
     const csv = "\ufeff" + [headers.join(sep), ...rows].join("\n");
-    const filename = `submanager-${profileId}-${new Date().toISOString().slice(0, 10)}.csv`;
+    const filename = `submanager-${profileId}-${new Date()
+      .toISOString()
+      .slice(0, 10)}.csv`;
     downloadText(filename, csv, "text/csv;charset=utf-8");
   }
 
@@ -784,7 +980,9 @@ export default function DashboardPage() {
           uid: `${profileId}-${s.id}-${iso}`,
           dateISO: iso,
           summary: `${s.name} – ${s.price} ${s.currency}`,
-          description: `Kategoria: ${s.category || "—"} | Cykl: ${getCycleLabel(s)}`,
+          description: `Kategoria: ${s.category || "—"} | Cykl: ${getCycleLabel(
+            s
+          )}`,
         });
 
         const probe = new Date(next);
@@ -818,15 +1016,28 @@ export default function DashboardPage() {
       }
 
       // wykryj duplikaty incoming vs existing
-      const dupAgainstExisting: Array<{ incomingId: string; existingId: string; existingName: string }> = [];
+      const dupAgainstExisting: Array<{
+        incomingId: string;
+        existingId: string;
+        existingName: string;
+      }> = [];
       for (const inc of incoming) {
-        const ex = items.find((e) => !e.archived && isProbableDuplicate(e, inc));
-        if (ex) dupAgainstExisting.push({ incomingId: inc.id, existingId: ex.id, existingName: ex.name });
+        const ex = items.find(
+          (e) => !e.archived && isProbableDuplicate(e, inc)
+        );
+        if (ex)
+          dupAgainstExisting.push({
+            incomingId: inc.id,
+            existingId: ex.id,
+            existingName: ex.name,
+          });
       }
 
       setImportModal({ open: true, incoming, dupAgainstExisting, report: [] });
     } catch {
-      setError("Import: nie udało się wczytać pliku (sprawdź czy to poprawny JSON).");
+      setError(
+        "Import: nie udało się wczytać pliku (sprawdź czy to poprawny JSON)."
+      );
     } finally {
       if (fileRef.current) fileRef.current.value = "";
     }
@@ -834,13 +1045,23 @@ export default function DashboardPage() {
 
   function importReplace() {
     setItems(importModal.incoming);
-    setImportModal({ open: false, incoming: [], dupAgainstExisting: [], report: [] });
+    setImportModal({
+      open: false,
+      incoming: [],
+      dupAgainstExisting: [],
+      report: [],
+    });
     setToast("Zaimportowano: zastąpiono listę.");
   }
 
   function importMerge() {
     setItems((prev) => mergeSubscriptions(prev, importModal.incoming));
-    setImportModal({ open: false, incoming: [], dupAgainstExisting: [], report: [] });
+    setImportModal({
+      open: false,
+      incoming: [],
+      dupAgainstExisting: [],
+      report: [],
+    });
     setToast("Zaimportowano: scalono po ID.");
   }
 
@@ -851,7 +1072,9 @@ export default function DashboardPage() {
     setItems((prev) => {
       const next = [...prev];
       for (const inc of importModal.incoming) {
-        const idx = next.findIndex((e) => !e.archived && isProbableDuplicate(e, inc));
+        const idx = next.findIndex(
+          (e) => !e.archived && isProbableDuplicate(e, inc)
+        );
         if (idx >= 0) {
           const before = next[idx];
           next[idx] = mergeTwo(before, inc);
@@ -865,7 +1088,9 @@ export default function DashboardPage() {
     });
 
     setImportModal((m) => ({ ...m, report }));
-    setToast("Import: wykonano auto-merge duplikatów (raport w oknie importu).");
+    setToast(
+      "Import: wykonano auto-merge duplikatów (raport w oknie importu)."
+    );
   }
 
   function markPaid(s: Subscription) {
@@ -893,7 +1118,9 @@ export default function DashboardPage() {
 
     // aktualizuj flags (nie usuwamy nic – tylko dopis)
     setItems((prev) =>
-      prev.map((x) => (x.id === s.id ? { ...x, updatedAt: new Date().toISOString() } : x))
+      prev.map((x) =>
+        x.id === s.id ? { ...x, updatedAt: new Date().toISOString() } : x
+      )
     );
   }
 
@@ -902,7 +1129,10 @@ export default function DashboardPage() {
     const n = Number(String(val).replace(",", "."));
     setSettings({
       ...settings,
-      budgets: { ...(settings.budgets ?? {}), [c]: Number.isFinite(n) ? Math.max(0, n) : 0 },
+      budgets: {
+        ...(settings.budgets ?? {}),
+        [c]: Number.isFinite(n) ? Math.max(0, n) : 0,
+      },
     });
   }
 
@@ -911,7 +1141,10 @@ export default function DashboardPage() {
     const n = Number(String(val).replace(",", "."));
     setSettings({
       ...settings,
-      expensiveThreshold: { ...(settings.expensiveThreshold ?? {}), [c]: Number.isFinite(n) ? Math.max(0, n) : 0 },
+      expensiveThreshold: {
+        ...(settings.expensiveThreshold ?? {}),
+        [c]: Number.isFinite(n) ? Math.max(0, n) : 0,
+      },
     });
   }
 
@@ -927,7 +1160,9 @@ export default function DashboardPage() {
   // ===== UI helpers =====
   const categoryBars = useMemo(() => {
     const map = computed.catByCurrency[chartCurrency] ?? {};
-    const entries = Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    const entries = Object.entries(map)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10);
     const total = entries.reduce((s, [, v]) => s + v, 0);
     return { entries, total };
   }, [computed.catByCurrency, chartCurrency]);
@@ -940,9 +1175,12 @@ export default function DashboardPage() {
         {/* TOP BAR */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight text-zinc-950">SubManager — Subskrypcje</h1>
+            <h1 className="text-2xl font-semibold tracking-tight text-zinc-950">
+              SubManager — Subskrypcje
+            </h1>
             <p className="mt-1 text-sm font-medium text-zinc-700">
-              Profile + budżet + wykres kategorii + cashflow + .ics + historia płatności + duplikaty + reguły.
+              Profile + budżet + wykres kategorii + cashflow + .ics + historia
+              płatności + duplikaty + reguły.
             </p>
           </div>
 
@@ -1016,7 +1254,9 @@ export default function DashboardPage() {
               type="file"
               accept="application/json,.json"
               className="hidden"
-              onChange={(e) => void onImportFileSelected(e.target.files?.[0] ?? null)}
+              onChange={(e) =>
+                void onImportFileSelected(e.target.files?.[0] ?? null)
+              }
             />
           </div>
         </div>
@@ -1031,7 +1271,10 @@ export default function DashboardPage() {
           </div>
         ) : null}
 
-        {budgetState && (budgetState.PLN.over || budgetState.EUR.over || budgetState.USD.over) ? (
+        {budgetState &&
+        (budgetState.PLN.over ||
+          budgetState.EUR.over ||
+          budgetState.USD.over) ? (
           <div className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-950">
             Przekroczony budżet:{" "}
             {(["PLN", "EUR", "USD"] as Currency[])
@@ -1051,38 +1294,55 @@ export default function DashboardPage() {
         <section className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
             <div className="text-sm font-semibold text-zinc-700">Aktywne</div>
-            <div className="mt-1 text-2xl font-bold text-zinc-950">{computed.activeCount}</div>
+            <div className="mt-1 text-2xl font-bold text-zinc-950">
+              {computed.activeCount}
+            </div>
           </div>
 
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
-            <div className="text-sm font-semibold text-zinc-700">Wygasa w 7 dni</div>
-            <div className="mt-1 text-2xl font-bold text-zinc-950">{computed.exp7Count}</div>
+            <div className="text-sm font-semibold text-zinc-700">
+              Wygasa w 7 dni
+            </div>
+            <div className="mt-1 text-2xl font-bold text-zinc-950">
+              {computed.exp7Count}
+            </div>
           </div>
 
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
-            <div className="text-sm font-semibold text-zinc-700">Suma / miesiąc (przybliż.)</div>
+            <div className="text-sm font-semibold text-zinc-700">
+              Suma / miesiąc (przybliż.)
+            </div>
             <div className="mt-2 space-y-1 text-sm font-medium">
               {(["PLN", "EUR", "USD"] as Currency[]).map((c) => (
                 <div key={c} className="flex items-center justify-between">
                   <span className="text-zinc-800">{c}</span>
-                  <span className="font-bold text-zinc-950">{formatMoney(computed.totalsByCurrency[c], c)}</span>
+                  <span className="font-bold text-zinc-950">
+                    {formatMoney(computed.totalsByCurrency[c], c)}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
-            <div className="text-sm font-semibold text-zinc-700">Najbliższa płatność</div>
+            <div className="text-sm font-semibold text-zinc-700">
+              Najbliższa płatność
+            </div>
             <div className="mt-2">
               {computed.nearest?.next ? (
                 <>
-                  <div className="text-base font-bold text-zinc-950">{computed.nearest.s.name}</div>
+                  <div className="text-base font-bold text-zinc-950">
+                    {computed.nearest.s.name}
+                  </div>
                   <div className="mt-1 text-sm font-semibold text-zinc-800">
-                    {formatPL(toISODate(computed.nearest.next))} ({badgeForDays(computed.nearest.days ?? 999).text})
+                    {formatPL(toISODate(computed.nearest.next))} (
+                    {badgeForDays(computed.nearest.days ?? 999).text})
                   </div>
                 </>
               ) : (
-                <div className="text-sm font-semibold text-zinc-700">Brak danych</div>
+                <div className="text-sm font-semibold text-zinc-700">
+                  Brak danych
+                </div>
               )}
             </div>
           </div>
@@ -1092,27 +1352,46 @@ export default function DashboardPage() {
         <section className="mt-6 grid gap-3 lg:grid-cols-2">
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
             <div className="flex items-center justify-between">
-              <div className="text-sm font-bold text-zinc-950">Budżet miesięczny</div>
-              <div className="text-xs font-semibold text-zinc-700">Alert = przekroczenie</div>
+              <div className="text-sm font-bold text-zinc-950">
+                Budżet miesięczny
+              </div>
+              <div className="text-xs font-semibold text-zinc-700">
+                Alert = przekroczenie
+              </div>
             </div>
 
             {settings && budgetState ? (
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 {(["PLN", "EUR", "USD"] as Currency[]).map((c) => (
-                  <div key={c} className="rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200">
+                  <div
+                    key={c}
+                    className="rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200"
+                  >
                     <div className="flex items-center justify-between">
                       <div className="text-xs font-bold text-zinc-800">{c}</div>
-                      <div className={classNames("text-xs font-bold", budgetState[c].over ? "text-red-700" : "text-zinc-800")}>
-                        {budgetState[c].budget > 0 ? `${Math.round(budgetState[c].pct)}%` : "—"}
+                      <div
+                        className={classNames(
+                          "text-xs font-bold",
+                          budgetState[c].over ? "text-red-700" : "text-zinc-800"
+                        )}
+                      >
+                        {budgetState[c].budget > 0
+                          ? `${Math.round(budgetState[c].pct)}%`
+                          : "—"}
                       </div>
                     </div>
 
                     <div className="mt-2 text-xs font-semibold text-zinc-700">
-                      Użyte: <span className="font-bold text-zinc-950">{formatMoney(budgetState[c].used, c)}</span>
+                      Użyte:{" "}
+                      <span className="font-bold text-zinc-950">
+                        {formatMoney(budgetState[c].used, c)}
+                      </span>
                     </div>
 
                     <div className="mt-2">
-                      <label className="text-[11px] font-bold text-zinc-700">Budżet</label>
+                      <label className="text-[11px] font-bold text-zinc-700">
+                        Budżet
+                      </label>
                       <input
                         value={String(settings.budgets?.[c] ?? 0)}
                         onChange={(e) => updateBudget(c, e.target.value)}
@@ -1122,10 +1401,14 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="mt-2">
-                      <label className="text-[11px] font-bold text-zinc-700">Próg „droga” (mies.)</label>
+                      <label className="text-[11px] font-bold text-zinc-700">
+                        Próg „droga” (mies.)
+                      </label>
                       <input
                         value={String(settings.expensiveThreshold?.[c] ?? 0)}
-                        onChange={(e) => updateExpensiveThreshold(c, e.target.value)}
+                        onChange={(e) =>
+                          updateExpensiveThreshold(c, e.target.value)
+                        }
                         className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
                         placeholder="np. 100"
                       />
@@ -1134,13 +1417,17 @@ export default function DashboardPage() {
                 ))}
               </div>
             ) : (
-              <div className="mt-3 text-sm font-semibold text-zinc-700">Ładowanie ustawień…</div>
+              <div className="mt-3 text-sm font-semibold text-zinc-700">
+                Ładowanie ustawień…
+              </div>
             )}
           </div>
 
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
             <div className="flex items-center justify-between">
-              <div className="text-sm font-bold text-zinc-950">Kategorie — udział kosztów (mies.)</div>
+              <div className="text-sm font-bold text-zinc-950">
+                Kategorie — udział kosztów (mies.)
+              </div>
               <select
                 value={chartCurrency}
                 onChange={(e) => setChartCurrency(e.target.value as Currency)}
@@ -1155,22 +1442,41 @@ export default function DashboardPage() {
             <div className="mt-3 space-y-2">
               {categoryBars.entries.length ? (
                 categoryBars.entries.map(([cat, val]) => {
-                  const pct = categoryBars.total > 0 ? (val / categoryBars.total) * 100 : 0;
+                  const pct =
+                    categoryBars.total > 0
+                      ? (val / categoryBars.total) * 100
+                      : 0;
                   return (
-                    <div key={cat} className="rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200">
+                    <div
+                      key={cat}
+                      className="rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200"
+                    >
                       <div className="flex items-center justify-between">
-                        <div className="text-sm font-bold text-zinc-950">{cat}</div>
-                        <div className="text-sm font-bold text-zinc-950">{formatMoney(val, chartCurrency)}</div>
+                        <div className="text-sm font-bold text-zinc-950">
+                          {cat}
+                        </div>
+                        <div className="text-sm font-bold text-zinc-950">
+                          {formatMoney(val, chartCurrency)}
+                        </div>
                       </div>
                       <div className="mt-2 h-2 w-full rounded-full bg-white ring-1 ring-zinc-200">
-                        <div className="h-2 rounded-full bg-zinc-900" style={{ width: `${Math.max(1, Math.min(100, pct))}%` }} />
+                        <div
+                          className="h-2 rounded-full bg-zinc-900"
+                          style={{
+                            width: `${Math.max(1, Math.min(100, pct))}%`,
+                          }}
+                        />
                       </div>
-                      <div className="mt-1 text-xs font-semibold text-zinc-700">{pct.toFixed(1)}%</div>
+                      <div className="mt-1 text-xs font-semibold text-zinc-700">
+                        {pct.toFixed(1)}%
+                      </div>
                     </div>
                   );
                 })
               ) : (
-                <div className="text-sm font-semibold text-zinc-700">Brak danych (albo brak aktywnych subskrypcji).</div>
+                <div className="text-sm font-semibold text-zinc-700">
+                  Brak danych (albo brak aktywnych subskrypcji).
+                </div>
               )}
             </div>
           </div>
@@ -1180,7 +1486,9 @@ export default function DashboardPage() {
         <section className="mt-6 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200">
           <div className="grid gap-3 md:grid-cols-12">
             <div className="md:col-span-5">
-              <label className="text-xs font-bold text-zinc-700">Szukaj (nazwa/kategoria)</label>
+              <label className="text-xs font-bold text-zinc-700">
+                Szukaj (nazwa/kategoria)
+              </label>
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -1208,7 +1516,9 @@ export default function DashboardPage() {
               <label className="text-xs font-bold text-zinc-700">Waluta</label>
               <select
                 value={currency}
-                onChange={(e) => setCurrency(e.target.value as Currency | "ALL")}
+                onChange={(e) =>
+                  setCurrency(e.target.value as Currency | "ALL")
+                }
                 className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
               >
                 <option value="ALL">Wszystkie</option>
@@ -1219,7 +1529,9 @@ export default function DashboardPage() {
             </div>
 
             <div className="md:col-span-2">
-              <label className="text-xs font-bold text-zinc-700">Sortowanie</label>
+              <label className="text-xs font-bold text-zinc-700">
+                Sortowanie
+              </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortBy)}
@@ -1249,7 +1561,9 @@ export default function DashboardPage() {
         {/* UPCOMING + LIST */}
         <section className="mt-6 grid gap-3 lg:grid-cols-3">
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200 lg:col-span-1">
-            <div className="text-sm font-bold text-zinc-950">Kolejne płatności (30 dni)</div>
+            <div className="text-sm font-bold text-zinc-950">
+              Kolejne płatności (30 dni)
+            </div>
             <div className="mt-3 space-y-2">
               {computed.upcoming30.length ? (
                 computed.upcoming30.map((x) => {
@@ -1257,40 +1571,68 @@ export default function DashboardPage() {
                   const iso = toISODate(day);
                   const b = badgeForDays(x.days ?? 999);
                   return (
-                    <div key={x.s.id} className="flex items-center justify-between rounded-xl bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200">
+                    <div
+                      key={x.s.id}
+                      className="flex items-center justify-between rounded-xl bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200"
+                    >
                       <div className="min-w-0">
-                        <div className="truncate text-sm font-bold text-zinc-950">{x.s.name}</div>
-                        <div className="text-xs font-semibold text-zinc-700">{formatPL(iso)}</div>
+                        <div className="truncate text-sm font-bold text-zinc-950">
+                          {x.s.name}
+                        </div>
+                        <div className="text-xs font-semibold text-zinc-700">
+                          {formatPL(iso)}
+                        </div>
                       </div>
-                      <span className={classNames("ml-3 shrink-0 rounded-full px-2 py-1 text-xs font-bold", b.cls)}>
+                      <span
+                        className={classNames(
+                          "ml-3 shrink-0 rounded-full px-2 py-1 text-xs font-bold",
+                          b.cls
+                        )}
+                      >
                         {b.text}
                       </span>
                     </div>
                   );
                 })
               ) : (
-                <div className="text-sm font-semibold text-zinc-700">Brak płatności w ciągu 30 dni.</div>
+                <div className="text-sm font-semibold text-zinc-700">
+                  Brak płatności w ciągu 30 dni.
+                </div>
               )}
             </div>
 
             {/* CASHFLOW */}
             <div className="mt-6">
-              <div className="text-sm font-bold text-zinc-950">Cashflow ({computed.horizonDays} dni)</div>
+              <div className="text-sm font-bold text-zinc-950">
+                Cashflow ({computed.horizonDays} dni)
+              </div>
               <div className="mt-2 text-xs font-semibold text-zinc-700">
-                Liczba zdarzeń: <span className="font-bold text-zinc-950">{computed.horizonEvents.length}</span>
+                Liczba zdarzeń:{" "}
+                <span className="font-bold text-zinc-950">
+                  {computed.horizonEvents.length}
+                </span>
               </div>
 
               <div className="mt-3 max-h-[260px] overflow-auto rounded-xl bg-zinc-50 p-2 ring-1 ring-zinc-200">
                 {computed.horizonEvents.length ? (
                   <div className="space-y-2">
                     {computed.horizonEvents.slice(0, 40).map((e, idx) => (
-                      <div key={idx} className="flex items-center justify-between rounded-lg bg-white px-3 py-2 ring-1 ring-zinc-200">
+                      <div
+                        key={idx}
+                        className="flex items-center justify-between rounded-lg bg-white px-3 py-2 ring-1 ring-zinc-200"
+                      >
                         <div className="min-w-0">
-                          <div className="truncate text-xs font-bold text-zinc-950">{e.s.name}</div>
-                          <div className="text-[11px] font-semibold text-zinc-700">{formatPL(e.dateISO)}</div>
+                          <div className="truncate text-xs font-bold text-zinc-950">
+                            {e.s.name}
+                          </div>
+                          <div className="text-[11px] font-semibold text-zinc-700">
+                            {formatPL(e.dateISO)}
+                          </div>
                         </div>
                         <div className="text-xs font-bold text-zinc-950">
-                          {e.amount === null ? "—" : `${e.amount.toFixed(2)} ${e.s.currency}`}
+                          {e.amount === null
+                            ? "—"
+                            : `${e.amount.toFixed(2)} ${e.s.currency}`}
                         </div>
                       </div>
                     ))}
@@ -1301,16 +1643,24 @@ export default function DashboardPage() {
                     ) : null}
                   </div>
                 ) : (
-                  <div className="text-sm font-semibold text-zinc-700">Brak zdarzeń w horyzoncie.</div>
+                  <div className="text-sm font-semibold text-zinc-700">
+                    Brak zdarzeń w horyzoncie.
+                  </div>
                 )}
               </div>
             </div>
           </div>
 
+          <WatchingCostCalculator subscriptions={items} />
+
           <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-200 lg:col-span-2">
             <div className="flex items-center justify-between">
-              <div className="text-sm font-bold text-zinc-950">Lista subskrypcji</div>
-              <div className="text-sm font-semibold text-zinc-800">Wyniki: {computed.sorted.length}</div>
+              <div className="text-sm font-bold text-zinc-950">
+                Lista subskrypcji
+              </div>
+              <div className="text-sm font-semibold text-zinc-800">
+                Wyniki: {computed.sorted.length}
+              </div>
             </div>
 
             <div className="mt-3 overflow-x-auto">
@@ -1333,14 +1683,25 @@ export default function DashboardPage() {
                     const badge = x.days !== null ? badgeForDays(x.days) : null;
 
                     const m = monthlyEquivalent(x.s);
-                    const th = settings?.expensiveThreshold?.[x.s.currency] ?? 0;
-                    const isExpensive = (Number(th) || 0) > 0 && m !== null && m >= (Number(th) || 0);
+                    const th =
+                      settings?.expensiveThreshold?.[x.s.currency] ?? 0;
+                    const isExpensive =
+                      (Number(th) || 0) > 0 &&
+                      m !== null &&
+                      m >= (Number(th) || 0);
 
                     return (
-                      <tr key={x.s.id} className={classNames(x.isArchived && "opacity-80")}>
+                      <tr
+                        key={x.s.id}
+                        className={classNames(x.isArchived && "opacity-80")}
+                      >
                         <td className="py-3 pr-4">
-                          <div className="font-bold text-zinc-950">{x.s.name}</div>
-                          <div className="text-xs font-semibold text-zinc-700">{x.s.category ? x.s.category : "—"}</div>
+                          <div className="font-bold text-zinc-950">
+                            {x.s.name}
+                          </div>
+                          <div className="text-xs font-semibold text-zinc-700">
+                            {x.s.category ? x.s.category : "—"}
+                          </div>
                           {isExpensive ? (
                             <div className="mt-1 inline-flex rounded-full bg-red-100 px-2 py-0.5 text-[11px] font-bold text-red-900 ring-1 ring-red-200">
                               Droga (mies.)
@@ -1359,18 +1720,29 @@ export default function DashboardPage() {
                         </td>
 
                         <td className="py-3 pr-4">
-                          <div className="font-bold text-zinc-950">{getCycleLabel(x.s)}</div>
+                          <div className="font-bold text-zinc-950">
+                            {getCycleLabel(x.s)}
+                          </div>
                           <div className="text-xs font-semibold text-zinc-700">
-                            {x.s.billingCycle === "custom" ? `co ${x.s.cycleDays ?? "?"} dni` : ""}
+                            {x.s.billingCycle === "custom"
+                              ? `co ${x.s.cycleDays ?? "?"} dni`
+                              : ""}
                           </div>
                         </td>
 
                         <td className="py-3 pr-4">
                           {next ? (
                             <div className="flex items-center gap-2">
-                              <span className="font-bold text-zinc-950">{formatPL(nextIso)}</span>
+                              <span className="font-bold text-zinc-950">
+                                {formatPL(nextIso)}
+                              </span>
                               {badge ? (
-                                <span className={classNames("rounded-full px-2 py-1 text-xs font-bold", badge.cls)}>
+                                <span
+                                  className={classNames(
+                                    "rounded-full px-2 py-1 text-xs font-bold",
+                                    badge.cls
+                                  )}
+                                >
                                   {badge.text}
                                 </span>
                               ) : null}
@@ -1387,7 +1759,11 @@ export default function DashboardPage() {
                               setItems((prev) =>
                                 prev.map((it) =>
                                   it.id === x.s.id
-                                    ? { ...it, usage: e.target.value as any, updatedAt: new Date().toISOString() }
+                                    ? {
+                                        ...it,
+                                        usage: e.target.value as any,
+                                        updatedAt: new Date().toISOString(),
+                                      }
                                     : it
                                 )
                               )
@@ -1442,8 +1818,12 @@ export default function DashboardPage() {
 
                   {!computed.sorted.length ? (
                     <tr>
-                      <td colSpan={6} className="py-10 text-center text-sm font-semibold text-zinc-700">
-                        Brak wyników. Zmień filtry lub dodaj pierwszą subskrypcję.
+                      <td
+                        colSpan={6}
+                        className="py-10 text-center text-sm font-semibold text-zinc-700"
+                      >
+                        Brak wyników. Zmień filtry lub dodaj pierwszą
+                        subskrypcję.
                       </td>
                     </tr>
                   ) : null}
@@ -1454,42 +1834,62 @@ export default function DashboardPage() {
             {/* SCANNER + PAYMENTS */}
             <div className="mt-6 grid gap-3 lg:grid-cols-2">
               <div className="rounded-2xl bg-zinc-50 p-4 ring-1 ring-zinc-200">
-                <div className="text-sm font-bold text-zinc-950">Skaner oszczędności</div>
+                <div className="text-sm font-bold text-zinc-950">
+                  Skaner oszczędności
+                </div>
 
                 <div className="mt-2 text-xs font-semibold text-zinc-700">
                   Kandydaci do anulowania (unused/expensive):{" "}
-                  <span className="font-bold text-zinc-950">{scanner.candidates.length}</span>
+                  <span className="font-bold text-zinc-950">
+                    {scanner.candidates.length}
+                  </span>
                 </div>
 
                 <div className="mt-2 space-y-1 text-xs font-semibold text-zinc-700">
                   {(["PLN", "EUR", "USD"] as Currency[]).map((c) => (
                     <div key={c} className="flex items-center justify-between">
                       <span>Potencjalna oszczędność / mies. ({c})</span>
-                      <span className="font-bold text-zinc-950">{formatMoney(scanner.savingsByCurrency[c], c)}</span>
+                      <span className="font-bold text-zinc-950">
+                        {formatMoney(scanner.savingsByCurrency[c], c)}
+                      </span>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-3 grid gap-2 sm:grid-cols-2">
                   <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-200">
-                    <div className="text-xs font-bold text-zinc-800">Drogie</div>
-                    <div className="mt-1 text-lg font-bold text-zinc-950">{scanner.expensive.length}</div>
+                    <div className="text-xs font-bold text-zinc-800">
+                      Drogie
+                    </div>
+                    <div className="mt-1 text-lg font-bold text-zinc-950">
+                      {scanner.expensive.length}
+                    </div>
                   </div>
                   <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-200">
-                    <div className="text-xs font-bold text-zinc-800">Nieużywane / rzadko</div>
-                    <div className="mt-1 text-lg font-bold text-zinc-950">{scanner.unused.length}</div>
+                    <div className="text-xs font-bold text-zinc-800">
+                      Nieużywane / rzadko
+                    </div>
+                    <div className="mt-1 text-lg font-bold text-zinc-950">
+                      {scanner.unused.length}
+                    </div>
                   </div>
                 </div>
 
                 {scanner.increased.length ? (
                   <div className="mt-3 rounded-xl bg-white p-3 ring-1 ring-zinc-200">
-                    <div className="text-xs font-bold text-zinc-800">Wykryto wzrost ceny</div>
+                    <div className="text-xs font-bold text-zinc-800">
+                      Wykryto wzrost ceny
+                    </div>
                     <div className="mt-2 space-y-1">
                       {scanner.increased.slice(0, 4).map((x) => (
-                        <div key={x.s.id} className="flex items-center justify-between text-xs font-semibold text-zinc-800">
+                        <div
+                          key={x.s.id}
+                          className="flex items-center justify-between text-xs font-semibold text-zinc-800"
+                        >
                           <span className="truncate">{x.s.name}</span>
                           <span className="font-bold text-zinc-950">
-                            {x.from.toFixed(2)} → {x.to.toFixed(2)} {x.s.currency}
+                            {x.from.toFixed(2)} → {x.to.toFixed(2)}{" "}
+                            {x.s.currency}
                           </span>
                         </div>
                       ))}
@@ -1499,21 +1899,33 @@ export default function DashboardPage() {
               </div>
 
               <div className="rounded-2xl bg-zinc-50 p-4 ring-1 ring-zinc-200">
-                <div className="text-sm font-bold text-zinc-950">Historia płatności</div>
+                <div className="text-sm font-bold text-zinc-950">
+                  Historia płatności
+                </div>
                 <div className="mt-2 text-xs font-semibold text-zinc-700">
-                  Ostatnie wpisy: <span className="font-bold text-zinc-950">{payments.length}</span>
+                  Ostatnie wpisy:{" "}
+                  <span className="font-bold text-zinc-950">
+                    {payments.length}
+                  </span>
                 </div>
 
                 <div className="mt-3 space-y-2">
                   {recentPayments.length ? (
                     recentPayments.map((p) => (
-                      <div key={p.id} className="rounded-xl bg-white px-3 py-2 ring-1 ring-zinc-200">
+                      <div
+                        key={p.id}
+                        className="rounded-xl bg-white px-3 py-2 ring-1 ring-zinc-200"
+                      >
                         <div className="flex items-center justify-between">
                           <div className="min-w-0">
-                            <div className="truncate text-xs font-bold text-zinc-950">{p.name}</div>
+                            <div className="truncate text-xs font-bold text-zinc-950">
+                              {p.name}
+                            </div>
                             <div className="text-[11px] font-semibold text-zinc-700">
                               {new Date(p.paidAt).toLocaleString("pl-PL")}
-                              {p.dueDate ? ` • termin: ${formatPL(p.dueDate)}` : ""}
+                              {p.dueDate
+                                ? ` • termin: ${formatPL(p.dueDate)}`
+                                : ""}
                             </div>
                           </div>
                           <div className="text-xs font-bold text-zinc-950">
@@ -1533,7 +1945,12 @@ export default function DashboardPage() {
                   <button
                     type="button"
                     onClick={() => {
-                      if (!confirm("Na pewno wyczyścić historię płatności w tym profilu?")) return;
+                      if (
+                        !confirm(
+                          "Na pewno wyczyścić historię płatności w tym profilu?"
+                        )
+                      )
+                        return;
                       setPayments([]);
                       setToast("Wyczyszczono historię płatności.");
                     }}
@@ -1582,7 +1999,9 @@ export default function DashboardPage() {
             <label className="text-xs font-bold text-zinc-700">Nazwa</label>
             <input
               value={draft.name}
-              onChange={(e) => setDraft((p) => ({ ...p, name: e.target.value }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, name: e.target.value }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
               placeholder="np. Netflix, Spotify, iCloud…"
             />
@@ -1592,7 +2011,9 @@ export default function DashboardPage() {
             <label className="text-xs font-bold text-zinc-700">Cena</label>
             <input
               value={draft.price}
-              onChange={(e) => setDraft((p) => ({ ...p, price: e.target.value }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, price: e.target.value }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
               placeholder="np. 29.99"
             />
@@ -1602,7 +2023,12 @@ export default function DashboardPage() {
             <label className="text-xs font-bold text-zinc-700">Waluta</label>
             <select
               value={draft.currency}
-              onChange={(e) => setDraft((p) => ({ ...p, currency: e.target.value as Currency }))}
+              onChange={(e) =>
+                setDraft((p) => ({
+                  ...p,
+                  currency: e.target.value as Currency,
+                }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
             >
               <option value="PLN">PLN</option>
@@ -1612,11 +2038,15 @@ export default function DashboardPage() {
           </div>
 
           <div>
-            <label className="text-xs font-bold text-zinc-700">Data startu</label>
+            <label className="text-xs font-bold text-zinc-700">
+              Data startu
+            </label>
             <input
               type="date"
               value={draft.startDate}
-              onChange={(e) => setDraft((p) => ({ ...p, startDate: e.target.value }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, startDate: e.target.value }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
             />
           </div>
@@ -1627,7 +2057,11 @@ export default function DashboardPage() {
               value={draft.billingCycle ?? "monthly"}
               onChange={(e) => {
                 const v = e.target.value as BillingCycle;
-                setDraft((p) => ({ ...p, billingCycle: v, cycleDays: v === "custom" ? (p.cycleDays ?? 30) : undefined }));
+                setDraft((p) => ({
+                  ...p,
+                  billingCycle: v,
+                  cycleDays: v === "custom" ? p.cycleDays ?? 30 : undefined,
+                }));
               }}
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
             >
@@ -1639,10 +2073,14 @@ export default function DashboardPage() {
 
           {draft.billingCycle === "custom" ? (
             <div>
-              <label className="text-xs font-bold text-zinc-700">Cycle Days</label>
+              <label className="text-xs font-bold text-zinc-700">
+                Cycle Days
+              </label>
               <input
                 value={String(draft.cycleDays ?? "")}
-                onChange={(e) => setDraft((p) => ({ ...p, cycleDays: Number(e.target.value) }))}
+                onChange={(e) =>
+                  setDraft((p) => ({ ...p, cycleDays: Number(e.target.value) }))
+                }
                 className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
                 placeholder="np. 14"
               />
@@ -1655,7 +2093,9 @@ export default function DashboardPage() {
             <label className="text-xs font-bold text-zinc-700">Kategoria</label>
             <input
               value={draft.category ?? ""}
-              onChange={(e) => setDraft((p) => ({ ...p, category: e.target.value }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, category: e.target.value }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
               placeholder="np. Streaming / Narzędzia / Szkoła"
             />
@@ -1665,7 +2105,9 @@ export default function DashboardPage() {
             <label className="text-xs font-bold text-zinc-700">Użycie</label>
             <select
               value={draft.usage ?? "unknown"}
-              onChange={(e) => setDraft((p) => ({ ...p, usage: e.target.value as any }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, usage: e.target.value as any }))
+              }
               className="mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
             >
               <option value="unknown">Nie wiem</option>
@@ -1680,7 +2122,9 @@ export default function DashboardPage() {
               <input
                 type="checkbox"
                 checked={draft.subscribed}
-                onChange={(e) => setDraft((p) => ({ ...p, subscribed: e.target.checked }))}
+                onChange={(e) =>
+                  setDraft((p) => ({ ...p, subscribed: e.target.checked }))
+                }
                 className="h-4 w-4 rounded border-zinc-300"
               />
               Aktywna subskrypcja
@@ -1688,10 +2132,14 @@ export default function DashboardPage() {
           </div>
 
           <div className="md:col-span-2">
-            <label className="text-xs font-bold text-zinc-700">Notatki (opcjonalnie)</label>
+            <label className="text-xs font-bold text-zinc-700">
+              Notatki (opcjonalnie)
+            </label>
             <textarea
               value={draft.notes ?? ""}
-              onChange={(e) => setDraft((p) => ({ ...p, notes: e.target.value }))}
+              onChange={(e) =>
+                setDraft((p) => ({ ...p, notes: e.target.value }))
+              }
               className="mt-1 min-h-[90px] w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
               placeholder="np. plan rodzinny, płatność kartą X, itp."
             />
@@ -1724,7 +2172,8 @@ export default function DashboardPage() {
         }
       >
         <p className="text-sm font-semibold text-zinc-800">
-          Usunięcie przeniesie rekord do „kosza” z opcją cofnięcia przez kilka sekund.
+          Usunięcie przeniesie rekord do „kosza” z opcją cofnięcia przez kilka
+          sekund.
         </p>
       </Modal>
 
@@ -1732,12 +2181,26 @@ export default function DashboardPage() {
       <Modal
         open={importModal.open}
         title="Import subskrypcji"
-        onClose={() => setImportModal({ open: false, incoming: [], dupAgainstExisting: [], report: [] })}
+        onClose={() =>
+          setImportModal({
+            open: false,
+            incoming: [],
+            dupAgainstExisting: [],
+            report: [],
+          })
+        }
         footer={
           <div className="flex flex-wrap justify-end gap-2">
             <button
               type="button"
-              onClick={() => setImportModal({ open: false, incoming: [], dupAgainstExisting: [], report: [] })}
+              onClick={() =>
+                setImportModal({
+                  open: false,
+                  incoming: [],
+                  dupAgainstExisting: [],
+                  report: [],
+                })
+              }
               className="rounded-xl bg-white px-4 py-2 text-sm font-bold text-zinc-900 ring-1 ring-zinc-200 hover:bg-zinc-50"
             >
               Anuluj
@@ -1770,14 +2233,19 @@ export default function DashboardPage() {
         }
       >
         <p className="text-sm font-semibold text-zinc-900">
-          Wczytano <span className="font-bold">{importModal.incoming.length}</span> rekordów.
+          Wczytano{" "}
+          <span className="font-bold">{importModal.incoming.length}</span>{" "}
+          rekordów.
         </p>
 
         {importModal.dupAgainstExisting.length ? (
           <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-950">
             Wykryto możliwe duplikaty względem istniejącej listy:{" "}
-            <span className="font-bold">{importModal.dupAgainstExisting.length}</span>.
-            Najlepsza opcja: <span className="font-bold">Auto-merge duplikaty</span>.
+            <span className="font-bold">
+              {importModal.dupAgainstExisting.length}
+            </span>
+            . Najlepsza opcja:{" "}
+            <span className="font-bold">Auto-merge duplikaty</span>.
           </div>
         ) : null}
 
@@ -1785,13 +2253,16 @@ export default function DashboardPage() {
           <div className="mt-3 rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200">
             <div className="text-xs font-bold text-zinc-800">Raport</div>
             <div className="mt-2 max-h-40 overflow-auto space-y-1 text-xs font-semibold text-zinc-800">
-              {importModal.report.map((r, i) => <div key={i}>• {r}</div>)}
+              {importModal.report.map((r, i) => (
+                <div key={i}>• {r}</div>
+              ))}
             </div>
           </div>
         ) : null}
 
         <p className="mt-3 text-sm font-semibold text-zinc-800">
-          „Scal po ID” nadpisze rekordy o tych samych ID. „Zastąp” ustawi listę dokładnie jak w pliku.
+          „Scal po ID” nadpisze rekordy o tych samych ID. „Zastąp” ustawi listę
+          dokładnie jak w pliku.
         </p>
       </Modal>
 
@@ -1799,7 +2270,14 @@ export default function DashboardPage() {
       <Modal
         open={dupeModal.open}
         title="Wykryto możliwy duplikat"
-        onClose={() => setDupeModal({ open: false, candidate: null, matches: [], selectedId: null })}
+        onClose={() =>
+          setDupeModal({
+            open: false,
+            candidate: null,
+            matches: [],
+            selectedId: null,
+          })
+        }
         footer={
           <div className="flex flex-wrap justify-end gap-2">
             <button
@@ -1811,7 +2289,10 @@ export default function DashboardPage() {
             </button>
             <button
               type="button"
-              onClick={() => dupeModal.selectedId && confirmMergeCandidateIntoExisting(dupeModal.selectedId)}
+              onClick={() =>
+                dupeModal.selectedId &&
+                confirmMergeCandidateIntoExisting(dupeModal.selectedId)
+              }
               className="rounded-xl bg-black px-4 py-2 text-sm font-bold text-white hover:bg-zinc-800"
             >
               Scal z wybraną
@@ -1820,12 +2301,15 @@ export default function DashboardPage() {
         }
       >
         <div className="text-sm font-semibold text-zinc-800">
-          Nowa subskrypcja wygląda podobnie do istniejącej (nazwa + cena + waluta). Wybierz: scalić czy zostawić obie.
+          Nowa subskrypcja wygląda podobnie do istniejącej (nazwa + cena +
+          waluta). Wybierz: scalić czy zostawić obie.
         </div>
 
         <div className="mt-4 rounded-xl bg-zinc-50 p-3 ring-1 ring-zinc-200">
           <div className="text-xs font-bold text-zinc-800">Nowa</div>
-          <div className="mt-1 text-sm font-bold text-zinc-950">{dupeModal.candidate?.name}</div>
+          <div className="mt-1 text-sm font-bold text-zinc-950">
+            {dupeModal.candidate?.name}
+          </div>
           <div className="text-xs font-semibold text-zinc-700">
             {dupeModal.candidate?.price} {dupeModal.candidate?.currency}
           </div>
@@ -1833,16 +2317,23 @@ export default function DashboardPage() {
 
         <div className="mt-4 space-y-2">
           {dupeModal.matches.map((m) => (
-            <label key={m.id} className="flex cursor-pointer items-center justify-between rounded-xl bg-white px-3 py-2 ring-1 ring-zinc-200">
+            <label
+              key={m.id}
+              className="flex cursor-pointer items-center justify-between rounded-xl bg-white px-3 py-2 ring-1 ring-zinc-200"
+            >
               <div>
                 <div className="text-sm font-bold text-zinc-950">{m.name}</div>
-                <div className="text-xs font-semibold text-zinc-700">{m.price} {m.currency}</div>
+                <div className="text-xs font-semibold text-zinc-700">
+                  {m.price} {m.currency}
+                </div>
               </div>
               <input
                 type="radio"
                 name="dupePick"
                 checked={dupeModal.selectedId === m.id}
-                onChange={() => setDupeModal((p) => ({ ...p, selectedId: m.id }))}
+                onChange={() =>
+                  setDupeModal((p) => ({ ...p, selectedId: m.id }))
+                }
               />
             </label>
           ))}
@@ -1867,15 +2358,21 @@ export default function DashboardPage() {
         }
       >
         <div className="text-sm font-semibold text-zinc-800">
-          Profile rozdzielają dane w localStorage (subskrypcje, budżet, historia płatności).
+          Profile rozdzielają dane w localStorage (subskrypcje, budżet, historia
+          płatności).
         </div>
 
         <div className="mt-4 space-y-2">
           {profiles.map((p) => (
-            <div key={p.id} className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200">
+            <div
+              key={p.id}
+              className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200"
+            >
               <div className="min-w-[200px]">
                 <div className="text-sm font-bold text-zinc-950">{p.name}</div>
-                <div className="text-xs font-semibold text-zinc-700">ID: {p.id}</div>
+                <div className="text-xs font-semibold text-zinc-700">
+                  ID: {p.id}
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -1897,7 +2394,9 @@ export default function DashboardPage() {
                   onClick={() => {
                     const name = prompt("Nowa nazwa profilu:", p.name);
                     if (!name) return;
-                    const next = profiles.map((x) => (x.id === p.id ? renameProfile(x, name) : x));
+                    const next = profiles.map((x) =>
+                      x.id === p.id ? renameProfile(x, name) : x
+                    );
                     setProfiles(next);
                     saveProfiles(next);
                   }}
@@ -1932,8 +2431,12 @@ export default function DashboardPage() {
         <div className="fixed bottom-4 left-1/2 z-50 w-[min(720px,calc(100%-2rem))] -translate-x-1/2 rounded-2xl bg-black px-4 py-3 text-white shadow-xl">
           <div className="flex items-center justify-between gap-3">
             <div className="min-w-0">
-              <div className="text-sm font-bold">Usunięto: {undo.item.name}</div>
-              <div className="text-xs text-white/70">Możesz cofnąć przez chwilę.</div>
+              <div className="text-sm font-bold">
+                Usunięto: {undo.item.name}
+              </div>
+              <div className="text-xs text-white/70">
+                Możesz cofnąć przez chwilę.
+              </div>
             </div>
             <button
               type="button"
