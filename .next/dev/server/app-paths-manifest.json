@@ -1,7 +1,9 @@
 {
+  "/api/billing/activate/route": "app/api/billing/activate/route.js",
+  "/api/billing/checkout/route": "app/api/billing/checkout/route.js",
   "/api/billing/status/route": "app/api/billing/status/route.js",
-  "/api/login/route": "app/api/login/route.js",
   "/api/me/route": "app/api/me/route.js",
+  "/api/register/route": "app/api/register/route.js",
   "/page": "app/page.js",
   "/subskrypcja/page": "app/subskrypcja/page.js"
 }

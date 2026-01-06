@@ -2009,6 +2009,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+// reszta importów i kod komponentu...
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$subscriptionsStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/lib/subscriptionsStore.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$ics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/lib/ics.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$profilesStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/lib/profilesStore.ts [app-client] (ecmascript)");
@@ -2129,7 +2130,7 @@ function Modal(props) {
                 onClick: props.onClose
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 177,
+                lineNumber: 179,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2143,7 +2144,7 @@ function Modal(props) {
                                 children: props.title
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 180,
+                                lineNumber: 182,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2153,13 +2154,13 @@ function Modal(props) {
                                 children: "Zamknij"
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 181,
+                                lineNumber: 183,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 179,
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2167,7 +2168,7 @@ function Modal(props) {
                         children: props.children
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 189,
+                        lineNumber: 191,
                         columnNumber: 9
                     }, this),
                     props.footer ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2175,19 +2176,19 @@ function Modal(props) {
                         children: props.footer
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 191,
+                        lineNumber: 193,
                         columnNumber: 11
                     }, this) : null
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 178,
+                lineNumber: 180,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-        lineNumber: 176,
+        lineNumber: 178,
         columnNumber: 5
     }, this);
 }
@@ -2204,7 +2205,7 @@ function IconUser() {
                 d: "M20 21a8 8 0 0 0-16 0"
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 207,
+                lineNumber: 209,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -2213,13 +2214,13 @@ function IconUser() {
                 r: "4"
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 208,
+                lineNumber: 210,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-        lineNumber: 200,
+        lineNumber: 202,
         columnNumber: 5
     }, this);
 }
@@ -2235,12 +2236,12 @@ function IconChevron() {
             d: "M6 9l6 6 6-6"
         }, void 0, false, {
             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-            lineNumber: 222,
+            lineNumber: 224,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-        lineNumber: 215,
+        lineNumber: 217,
         columnNumber: 5
     }, this);
 }
@@ -3173,7 +3174,7 @@ function DashboardPage() {
                                         children: "SubManager — Subskrypcje"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1174,
+                                        lineNumber: 1176,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3181,13 +3182,13 @@ function DashboardPage() {
                                         children: "Profile + budżet + wykres kategorii + cashflow + .ics + historia płatności + duplikaty + reguły."
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1177,
+                                        lineNumber: 1179,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1173,
+                                lineNumber: 1175,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3202,30 +3203,30 @@ function DashboardPage() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconUser, {}, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1191,
+                                                    lineNumber: 1193,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: profiles.find((p)=>p.id === profileId)?.name ?? "Profil"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1192,
+                                                    lineNumber: 1194,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconChevron, {}, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1195,
+                                                    lineNumber: 1197,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1186,
+                                            lineNumber: 1188,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1185,
+                                        lineNumber: 1187,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3235,7 +3236,7 @@ function DashboardPage() {
                                         children: "+ Dodaj"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1199,
+                                        lineNumber: 1201,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3245,7 +3246,7 @@ function DashboardPage() {
                                         children: "Import JSON"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1207,
+                                        lineNumber: 1209,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3255,7 +3256,7 @@ function DashboardPage() {
                                         children: "Export JSON"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1215,
+                                        lineNumber: 1217,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3265,7 +3266,7 @@ function DashboardPage() {
                                         children: "Export CSV"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1223,
+                                        lineNumber: 1225,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3275,7 +3276,7 @@ function DashboardPage() {
                                         children: "Export .ics"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1231,
+                                        lineNumber: 1233,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3286,7 +3287,7 @@ function DashboardPage() {
                                         children: "Wyloguj"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1239,
+                                        lineNumber: 1241,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3297,19 +3298,19 @@ function DashboardPage() {
                                         onChange: (e)=>void onImportFileSelected(e.target.files?.[0] ?? null)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1248,
+                                        lineNumber: 1250,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1183,
+                                lineNumber: 1185,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1172,
+                        lineNumber: 1174,
                         columnNumber: 9
                     }, this),
                     computed.dueSoon.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3324,13 +3325,13 @@ function DashboardPage() {
                                 children: computed.dueSoon.map((x)=>x.s.name).join(", ")
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1264,
+                                lineNumber: 1266,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1262,
+                        lineNumber: 1264,
                         columnNumber: 11
                     }, this) : null,
                     budgetState && (budgetState.PLN.over || budgetState.EUR.over || budgetState.USD.over) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3346,7 +3347,7 @@ function DashboardPage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1274,
+                        lineNumber: 1276,
                         columnNumber: 11
                     }, this) : null,
                     error ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3354,7 +3355,7 @@ function DashboardPage() {
                         children: error
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1284,
+                        lineNumber: 1286,
                         columnNumber: 11
                     }, this) : null,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3368,7 +3369,7 @@ function DashboardPage() {
                                         children: "Aktywne"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1292,
+                                        lineNumber: 1294,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3376,13 +3377,13 @@ function DashboardPage() {
                                         children: computed.activeCount
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1293,
+                                        lineNumber: 1295,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1291,
+                                lineNumber: 1293,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3393,7 +3394,7 @@ function DashboardPage() {
                                         children: "Wygasa w 7 dni"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1299,
+                                        lineNumber: 1301,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3401,13 +3402,13 @@ function DashboardPage() {
                                         children: computed.exp7Count
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1302,
+                                        lineNumber: 1304,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1298,
+                                lineNumber: 1300,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3418,7 +3419,7 @@ function DashboardPage() {
                                         children: "Suma / miesiąc (przybliż.)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1308,
+                                        lineNumber: 1310,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3435,7 +3436,7 @@ function DashboardPage() {
                                                         children: c
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1314,
+                                                        lineNumber: 1316,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3443,24 +3444,24 @@ function DashboardPage() {
                                                         children: formatMoney(computed.totalsByCurrency[c], c)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1315,
+                                                        lineNumber: 1317,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, c, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1313,
+                                                lineNumber: 1315,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1311,
+                                        lineNumber: 1313,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1307,
+                                lineNumber: 1309,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3471,7 +3472,7 @@ function DashboardPage() {
                                         children: "Najbliższa płatność"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1324,
+                                        lineNumber: 1326,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3483,7 +3484,7 @@ function DashboardPage() {
                                                     children: computed.nearest.s.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1330,
+                                                    lineNumber: 1332,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3496,7 +3497,7 @@ function DashboardPage() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1333,
+                                                    lineNumber: 1335,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -3505,24 +3506,24 @@ function DashboardPage() {
                                             children: "Brak danych"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1339,
+                                            lineNumber: 1341,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1327,
+                                        lineNumber: 1329,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1323,
+                                lineNumber: 1325,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1290,
+                        lineNumber: 1292,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3539,7 +3540,7 @@ function DashboardPage() {
                                                 children: "Budżet miesięczny"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1351,
+                                                lineNumber: 1353,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3547,13 +3548,13 @@ function DashboardPage() {
                                                 children: "Alert = przekroczenie"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1354,
+                                                lineNumber: 1356,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1350,
+                                        lineNumber: 1352,
                                         columnNumber: 13
                                     }, this),
                                     settings && budgetState ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3573,7 +3574,7 @@ function DashboardPage() {
                                                                 children: c
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1367,
+                                                                lineNumber: 1369,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3581,13 +3582,13 @@ function DashboardPage() {
                                                                 children: budgetState[c].budget > 0 ? `${Math.round(budgetState[c].pct)}%` : "—"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1368,
+                                                                lineNumber: 1370,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1366,
+                                                        lineNumber: 1368,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3600,13 +3601,13 @@ function DashboardPage() {
                                                                 children: formatMoney(budgetState[c].used, c)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1382,
+                                                                lineNumber: 1384,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1380,
+                                                        lineNumber: 1382,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3617,7 +3618,7 @@ function DashboardPage() {
                                                                 children: "Budżet"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1388,
+                                                                lineNumber: 1390,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3627,13 +3628,13 @@ function DashboardPage() {
                                                                 placeholder: "np. 150"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1391,
+                                                                lineNumber: 1393,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1387,
+                                                        lineNumber: 1389,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3644,7 +3645,7 @@ function DashboardPage() {
                                                                 children: "Próg „droga” (mies.)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1400,
+                                                                lineNumber: 1402,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3654,37 +3655,37 @@ function DashboardPage() {
                                                                 placeholder: "np. 100"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1403,
+                                                                lineNumber: 1405,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1399,
+                                                        lineNumber: 1401,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, c, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1362,
+                                                lineNumber: 1364,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1360,
+                                        lineNumber: 1362,
                                         columnNumber: 15
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mt-3 text-sm font-semibold text-zinc-700",
                                         children: "Ładowanie ustawień…"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1416,
+                                        lineNumber: 1418,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1349,
+                                lineNumber: 1351,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3698,7 +3699,7 @@ function DashboardPage() {
                                                 children: "Kategorie — udział kosztów (mies.)"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1424,
+                                                lineNumber: 1426,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3711,7 +3712,7 @@ function DashboardPage() {
                                                         children: "PLN"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1432,
+                                                        lineNumber: 1434,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3719,7 +3720,7 @@ function DashboardPage() {
                                                         children: "EUR"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1433,
+                                                        lineNumber: 1435,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3727,19 +3728,19 @@ function DashboardPage() {
                                                         children: "USD"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1434,
+                                                        lineNumber: 1436,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1427,
+                                                lineNumber: 1429,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1423,
+                                        lineNumber: 1425,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3757,7 +3758,7 @@ function DashboardPage() {
                                                                 children: cat
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1451,
+                                                                lineNumber: 1453,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3765,13 +3766,13 @@ function DashboardPage() {
                                                                 children: formatMoney(val, chartCurrency)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1454,
+                                                                lineNumber: 1456,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1450,
+                                                        lineNumber: 1452,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3783,12 +3784,12 @@ function DashboardPage() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                            lineNumber: 1459,
+                                                            lineNumber: 1461,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1458,
+                                                        lineNumber: 1460,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3799,13 +3800,13 @@ function DashboardPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1466,
+                                                        lineNumber: 1468,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, cat, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1446,
+                                                lineNumber: 1448,
                                                 columnNumber: 21
                                             }, this);
                                         }) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3813,24 +3814,24 @@ function DashboardPage() {
                                             children: "Brak danych (albo brak aktywnych subskrypcji)."
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1473,
+                                            lineNumber: 1475,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1438,
+                                        lineNumber: 1440,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1422,
+                                lineNumber: 1424,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1348,
+                        lineNumber: 1350,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3846,7 +3847,7 @@ function DashboardPage() {
                                             children: "Szukaj (nazwa/kategoria)"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1485,
+                                            lineNumber: 1487,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3856,13 +3857,13 @@ function DashboardPage() {
                                             className: "mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1488,
+                                            lineNumber: 1490,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 1484,
+                                    lineNumber: 1486,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3873,7 +3874,7 @@ function DashboardPage() {
                                             children: "Status"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1497,
+                                            lineNumber: 1499,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3886,7 +3887,7 @@ function DashboardPage() {
                                                     children: "Wszystkie"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1503,
+                                                    lineNumber: 1505,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3894,7 +3895,7 @@ function DashboardPage() {
                                                     children: "Aktywne"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1504,
+                                                    lineNumber: 1506,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3902,7 +3903,7 @@ function DashboardPage() {
                                                     children: "Nieaktywne"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1505,
+                                                    lineNumber: 1507,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3910,7 +3911,7 @@ function DashboardPage() {
                                                     children: "Wygasa ≤ 7 dni"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1506,
+                                                    lineNumber: 1508,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3918,19 +3919,19 @@ function DashboardPage() {
                                                     children: "Archiwum"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1507,
+                                                    lineNumber: 1509,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1498,
+                                            lineNumber: 1500,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 1496,
+                                    lineNumber: 1498,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3941,7 +3942,7 @@ function DashboardPage() {
                                             children: "Waluta"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1512,
+                                            lineNumber: 1514,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3954,7 +3955,7 @@ function DashboardPage() {
                                                     children: "Wszystkie"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1520,
+                                                    lineNumber: 1522,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3962,7 +3963,7 @@ function DashboardPage() {
                                                     children: "PLN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1521,
+                                                    lineNumber: 1523,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3970,7 +3971,7 @@ function DashboardPage() {
                                                     children: "EUR"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1522,
+                                                    lineNumber: 1524,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3978,19 +3979,19 @@ function DashboardPage() {
                                                     children: "USD"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1523,
+                                                    lineNumber: 1525,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1513,
+                                            lineNumber: 1515,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 1511,
+                                    lineNumber: 1513,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4001,7 +4002,7 @@ function DashboardPage() {
                                             children: "Sortowanie"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1528,
+                                            lineNumber: 1530,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -4014,7 +4015,7 @@ function DashboardPage() {
                                                     children: "Najbliższa płatność"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1536,
+                                                    lineNumber: 1538,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4022,7 +4023,7 @@ function DashboardPage() {
                                                     children: "Nazwa"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1537,
+                                                    lineNumber: 1539,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4030,7 +4031,7 @@ function DashboardPage() {
                                                     children: "Cena ↓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1538,
+                                                    lineNumber: 1540,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4038,19 +4039,19 @@ function DashboardPage() {
                                                     children: "Cena ↑"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1539,
+                                                    lineNumber: 1541,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1531,
+                                            lineNumber: 1533,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 1527,
+                                    lineNumber: 1529,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4065,30 +4066,30 @@ function DashboardPage() {
                                                 className: "h-4 w-4 rounded border-zinc-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1545,
+                                                lineNumber: 1547,
                                                 columnNumber: 17
                                             }, this),
                                             "Archiwum"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1544,
+                                        lineNumber: 1546,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 1543,
+                                    lineNumber: 1545,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 1483,
+                            lineNumber: 1485,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1482,
+                        lineNumber: 1484,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -4102,7 +4103,7 @@ function DashboardPage() {
                                         children: "Kolejne płatności (30 dni)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1560,
+                                        lineNumber: 1562,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4122,7 +4123,7 @@ function DashboardPage() {
                                                                 children: x.s.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1575,
+                                                                lineNumber: 1577,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4130,13 +4131,13 @@ function DashboardPage() {
                                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$subscriptionsStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatPL"])(iso)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1578,
+                                                                lineNumber: 1580,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1574,
+                                                        lineNumber: 1576,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4144,13 +4145,13 @@ function DashboardPage() {
                                                         children: b.text
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1582,
+                                                        lineNumber: 1584,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, x.s.id, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1570,
+                                                lineNumber: 1572,
                                                 columnNumber: 21
                                             }, this);
                                         }) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4158,12 +4159,12 @@ function DashboardPage() {
                                             children: "Brak płatności w ciągu 30 dni."
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1594,
+                                            lineNumber: 1596,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1563,
+                                        lineNumber: 1565,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4178,7 +4179,7 @@ function DashboardPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1602,
+                                                lineNumber: 1604,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4191,13 +4192,13 @@ function DashboardPage() {
                                                         children: computed.horizonEvents.length
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1607,
+                                                        lineNumber: 1609,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1605,
+                                                lineNumber: 1607,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4216,7 +4217,7 @@ function DashboardPage() {
                                                                                 children: e.s.name
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1621,
+                                                                                lineNumber: 1623,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4224,13 +4225,13 @@ function DashboardPage() {
                                                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$subscriptionsStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatPL"])(e.dateISO)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1624,
+                                                                                lineNumber: 1626,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1620,
+                                                                        lineNumber: 1622,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4238,13 +4239,13 @@ function DashboardPage() {
                                                                         children: e.amount === null ? "—" : `${e.amount.toFixed(2)} ${e.s.currency}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1628,
+                                                                        lineNumber: 1630,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, idx, true, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1616,
+                                                                lineNumber: 1618,
                                                                 columnNumber: 23
                                                             }, this)),
                                                         computed.horizonEvents.length > 40 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4256,56 +4257,37 @@ function DashboardPage() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                            lineNumber: 1636,
+                                                            lineNumber: 1638,
                                                             columnNumber: 23
                                                         }, this) : null
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1614,
+                                                    lineNumber: 1616,
                                                     columnNumber: 19
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "text-sm font-semibold text-zinc-700",
                                                     children: "Brak zdarzeń w horyzoncie."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1642,
+                                                    lineNumber: 1644,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1612,
+                                                lineNumber: 1614,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1601,
+                                        lineNumber: 1603,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1559,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(UsageCostCalculator, {
-                                subscriptions: computed.sorted.map((x, idx)=>{
-                                    const s = x.s ?? x; // u was w tabeli jest x.s, więc bierzemy s z x
-                                    const cycleRaw = String(s.cycle ?? s.interval ?? s.billingCycle ?? "MONTH").toLowerCase();
-                                    const cycle = cycleRaw.includes("year") || cycleRaw.includes("rok") ? "YEAR" : cycleRaw.includes("week") || cycleRaw.includes("tydz") ? "WEEK" : cycleRaw.includes("day") || cycleRaw.includes("dzie") ? "DAY" : "MONTH";
-                                    return {
-                                        id: String(s.id ?? s._id ?? s.uuid ?? s.name ?? s.title ?? idx),
-                                        name: String(s.name ?? s.title ?? "Subskrypcja"),
-                                        currency: String(s.currency ?? s.ccy ?? s.currencyCode ?? "PLN"),
-                                        amount: Number(s.amount ?? s.price ?? s.cost ?? s.value ?? 0),
-                                        cycle,
-                                        people: Number(s.people ?? s.splitCount ?? s.payers ?? 1)
-                                    };
-                                })
-                            }, void 0, false, {
-                                fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1649,
+                                lineNumber: 1561,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4319,7 +4301,7 @@ function DashboardPage() {
                                                 children: "Lista subskrypcji"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1680,
+                                                lineNumber: 1654,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4330,13 +4312,13 @@ function DashboardPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1683,
+                                                lineNumber: 1657,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1679,
+                                        lineNumber: 1653,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4354,7 +4336,7 @@ function DashboardPage() {
                                                                 children: "Nazwa"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1692,
+                                                                lineNumber: 1666,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -4362,7 +4344,7 @@ function DashboardPage() {
                                                                 children: "Cena"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1693,
+                                                                lineNumber: 1667,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -4370,7 +4352,7 @@ function DashboardPage() {
                                                                 children: "Cykl"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1694,
+                                                                lineNumber: 1668,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -4378,7 +4360,7 @@ function DashboardPage() {
                                                                 children: "Następna płatność"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1695,
+                                                                lineNumber: 1669,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -4386,7 +4368,7 @@ function DashboardPage() {
                                                                 children: "Użycie"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1696,
+                                                                lineNumber: 1670,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -4394,18 +4376,18 @@ function DashboardPage() {
                                                                 children: "Akcje"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1697,
+                                                                lineNumber: 1671,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1691,
+                                                        lineNumber: 1665,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1690,
+                                                    lineNumber: 1664,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -4429,7 +4411,7 @@ function DashboardPage() {
                                                                                 children: x.s.name
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1721,
+                                                                                lineNumber: 1695,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4437,7 +4419,7 @@ function DashboardPage() {
                                                                                 children: x.s.category ? x.s.category : "—"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1724,
+                                                                                lineNumber: 1698,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             isExpensive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4445,13 +4427,13 @@ function DashboardPage() {
                                                                                 children: "Droga (mies.)"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1728,
+                                                                                lineNumber: 1702,
                                                                                 columnNumber: 29
                                                                             }, this) : null
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1720,
+                                                                        lineNumber: 1694,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -4466,7 +4448,7 @@ function DashboardPage() {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1735,
+                                                                                lineNumber: 1709,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4478,13 +4460,13 @@ function DashboardPage() {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1738,
+                                                                                lineNumber: 1712,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1734,
+                                                                        lineNumber: 1708,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -4495,7 +4477,7 @@ function DashboardPage() {
                                                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$subscriptionsStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCycleLabel"])(x.s)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1745,
+                                                                                lineNumber: 1719,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4503,13 +4485,13 @@ function DashboardPage() {
                                                                                 children: x.s.billingCycle === "custom" ? `co ${x.s.cycleDays ?? "?"} dni` : ""
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1748,
+                                                                                lineNumber: 1722,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1744,
+                                                                        lineNumber: 1718,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -4522,7 +4504,7 @@ function DashboardPage() {
                                                                                     children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$subscriptionsStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatPL"])(nextIso)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1758,
+                                                                                    lineNumber: 1732,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 badge ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4530,25 +4512,25 @@ function DashboardPage() {
                                                                                     children: badge.text
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1762,
+                                                                                    lineNumber: 1736,
                                                                                     columnNumber: 33
                                                                                 }, this) : null
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1757,
+                                                                            lineNumber: 1731,
                                                                             columnNumber: 29
                                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             className: "text-zinc-700",
                                                                             children: "—"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1773,
+                                                                            lineNumber: 1747,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1755,
+                                                                        lineNumber: 1729,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -4567,7 +4549,7 @@ function DashboardPage() {
                                                                                     children: "Nie wiem"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1795,
+                                                                                    lineNumber: 1769,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4575,7 +4557,7 @@ function DashboardPage() {
                                                                                     children: "Często"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1796,
+                                                                                    lineNumber: 1770,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4583,7 +4565,7 @@ function DashboardPage() {
                                                                                     children: "Rzadko"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1797,
+                                                                                    lineNumber: 1771,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -4591,18 +4573,18 @@ function DashboardPage() {
                                                                                     children: "Nie używam"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1798,
+                                                                                    lineNumber: 1772,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1778,
+                                                                            lineNumber: 1752,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1777,
+                                                                        lineNumber: 1751,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -4617,7 +4599,7 @@ function DashboardPage() {
                                                                                     children: "Zapłacone"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1804,
+                                                                                    lineNumber: 1778,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4627,7 +4609,7 @@ function DashboardPage() {
                                                                                     children: "Edytuj"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1812,
+                                                                                    lineNumber: 1786,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4637,7 +4619,7 @@ function DashboardPage() {
                                                                                     children: x.isArchived ? "Przywróć" : "Archiwizuj"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1820,
+                                                                                    lineNumber: 1794,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4647,24 +4629,24 @@ function DashboardPage() {
                                                                                     children: "Usuń"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1828,
+                                                                                    lineNumber: 1802,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1803,
+                                                                            lineNumber: 1777,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1802,
+                                                                        lineNumber: 1776,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, x.s.id, true, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1716,
+                                                                lineNumber: 1690,
                                                                 columnNumber: 23
                                                             }, this);
                                                         }),
@@ -4675,29 +4657,29 @@ function DashboardPage() {
                                                                 children: "Brak wyników. Zmień filtry lub dodaj pierwszą subskrypcję."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1843,
+                                                                lineNumber: 1817,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                            lineNumber: 1842,
+                                                            lineNumber: 1816,
                                                             columnNumber: 21
                                                         }, this) : null
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                    lineNumber: 1701,
+                                                    lineNumber: 1675,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 1689,
+                                            lineNumber: 1663,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1688,
+                                        lineNumber: 1662,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4711,7 +4693,7 @@ function DashboardPage() {
                                                         children: "Skaner oszczędności"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1859,
+                                                        lineNumber: 1833,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4724,13 +4706,13 @@ function DashboardPage() {
                                                                 children: scanner.candidates.length
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1865,
+                                                                lineNumber: 1839,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1863,
+                                                        lineNumber: 1837,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4750,7 +4732,7 @@ function DashboardPage() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1873,
+                                                                        lineNumber: 1847,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4758,18 +4740,18 @@ function DashboardPage() {
                                                                         children: formatMoney(scanner.savingsByCurrency[c], c)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1874,
+                                                                        lineNumber: 1848,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, c, true, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1872,
+                                                                lineNumber: 1846,
                                                                 columnNumber: 21
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1870,
+                                                        lineNumber: 1844,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4783,7 +4765,7 @@ function DashboardPage() {
                                                                         children: "Drogie"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1883,
+                                                                        lineNumber: 1857,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4791,13 +4773,13 @@ function DashboardPage() {
                                                                         children: scanner.expensive.length
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1886,
+                                                                        lineNumber: 1860,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1882,
+                                                                lineNumber: 1856,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4808,7 +4790,7 @@ function DashboardPage() {
                                                                         children: "Nieużywane / rzadko"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1891,
+                                                                        lineNumber: 1865,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4816,19 +4798,19 @@ function DashboardPage() {
                                                                         children: scanner.unused.length
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1894,
+                                                                        lineNumber: 1868,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1890,
+                                                                lineNumber: 1864,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1881,
+                                                        lineNumber: 1855,
                                                         columnNumber: 17
                                                     }, this),
                                                     scanner.increased.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4839,7 +4821,7 @@ function DashboardPage() {
                                                                 children: "Wykryto wzrost ceny"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1902,
+                                                                lineNumber: 1876,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4852,7 +4834,7 @@ function DashboardPage() {
                                                                                 children: x.s.name
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1911,
+                                                                                lineNumber: 1885,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4866,30 +4848,30 @@ function DashboardPage() {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                lineNumber: 1912,
+                                                                                lineNumber: 1886,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, x.s.id, true, {
                                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                        lineNumber: 1907,
+                                                                        lineNumber: 1881,
                                                                         columnNumber: 25
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1905,
+                                                                lineNumber: 1879,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1901,
+                                                        lineNumber: 1875,
                                                         columnNumber: 19
                                                     }, this) : null
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1858,
+                                                lineNumber: 1832,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4900,7 +4882,7 @@ function DashboardPage() {
                                                         children: "Historia płatności"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1924,
+                                                        lineNumber: 1898,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4913,13 +4895,13 @@ function DashboardPage() {
                                                                 children: payments.length
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1929,
+                                                                lineNumber: 1903,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1927,
+                                                        lineNumber: 1901,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4937,7 +4919,7 @@ function DashboardPage() {
                                                                                     children: p.name
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1943,
+                                                                                    lineNumber: 1917,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4948,13 +4930,13 @@ function DashboardPage() {
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                                    lineNumber: 1946,
+                                                                                    lineNumber: 1920,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1942,
+                                                                            lineNumber: 1916,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4962,30 +4944,30 @@ function DashboardPage() {
                                                                             children: formatMoney(p.amount, p.currency)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                            lineNumber: 1953,
+                                                                            lineNumber: 1927,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                    lineNumber: 1941,
+                                                                    lineNumber: 1915,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, p.id, false, {
                                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                                lineNumber: 1937,
+                                                                lineNumber: 1911,
                                                                 columnNumber: 23
                                                             }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "text-sm font-semibold text-zinc-700",
                                                             children: "Brak historii — kliknij „Zapłacone” przy subskrypcji."
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                            lineNumber: 1960,
+                                                            lineNumber: 1934,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1934,
+                                                        lineNumber: 1908,
                                                         columnNumber: 17
                                                     }, this),
                                                     payments.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4999,37 +4981,37 @@ function DashboardPage() {
                                                         children: "Wyczyść historię"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                        lineNumber: 1967,
+                                                        lineNumber: 1941,
                                                         columnNumber: 19
                                                     }, this) : null
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 1923,
+                                                lineNumber: 1897,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 1857,
+                                        lineNumber: 1831,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 1678,
+                                lineNumber: 1652,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 1558,
+                        lineNumber: 1560,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 1170,
+                lineNumber: 1172,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Modal, {
@@ -5044,7 +5026,7 @@ function DashboardPage() {
                             children: "Tip: „Niestandardowa” jest super, jeśli masz cykl np. co 14 dni."
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 1997,
+                            lineNumber: 1971,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5057,7 +5039,7 @@ function DashboardPage() {
                                     children: "Anuluj"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2001,
+                                    lineNumber: 1975,
                                     columnNumber: 15
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5067,19 +5049,19 @@ function DashboardPage() {
                                     children: "Zapisz"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2008,
+                                    lineNumber: 1982,
                                     columnNumber: 15
                                 }, void 0)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2000,
+                            lineNumber: 1974,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 1996,
+                    lineNumber: 1970,
                     columnNumber: 11
                 }, void 0),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5093,7 +5075,7 @@ function DashboardPage() {
                                     children: "Nazwa"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2021,
+                                    lineNumber: 1995,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5106,13 +5088,13 @@ function DashboardPage() {
                                     placeholder: "np. Netflix, Spotify, iCloud…"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2022,
+                                    lineNumber: 1996,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2020,
+                            lineNumber: 1994,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5122,7 +5104,7 @@ function DashboardPage() {
                                     children: "Cena"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2033,
+                                    lineNumber: 2007,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5135,13 +5117,13 @@ function DashboardPage() {
                                     placeholder: "np. 29.99"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2034,
+                                    lineNumber: 2008,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2032,
+                            lineNumber: 2006,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5151,7 +5133,7 @@ function DashboardPage() {
                                     children: "Waluta"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2045,
+                                    lineNumber: 2019,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -5167,7 +5149,7 @@ function DashboardPage() {
                                             children: "PLN"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2056,
+                                            lineNumber: 2030,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5175,7 +5157,7 @@ function DashboardPage() {
                                             children: "EUR"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2057,
+                                            lineNumber: 2031,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5183,19 +5165,19 @@ function DashboardPage() {
                                             children: "USD"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2058,
+                                            lineNumber: 2032,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2046,
+                                    lineNumber: 2020,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2044,
+                            lineNumber: 2018,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5205,7 +5187,7 @@ function DashboardPage() {
                                     children: "Data startu"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2063,
+                                    lineNumber: 2037,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5218,13 +5200,13 @@ function DashboardPage() {
                                     className: "mt-1 w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-900 outline-none focus:border-zinc-400"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2066,
+                                    lineNumber: 2040,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2062,
+                            lineNumber: 2036,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5234,7 +5216,7 @@ function DashboardPage() {
                                     children: "Cykl"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2077,
+                                    lineNumber: 2051,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -5254,7 +5236,7 @@ function DashboardPage() {
                                             children: "Miesięczny"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2090,
+                                            lineNumber: 2064,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5262,7 +5244,7 @@ function DashboardPage() {
                                             children: "Roczny"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2091,
+                                            lineNumber: 2065,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5270,19 +5252,19 @@ function DashboardPage() {
                                             children: "Niestandardowy"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2092,
+                                            lineNumber: 2066,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2078,
+                                    lineNumber: 2052,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2076,
+                            lineNumber: 2050,
                             columnNumber: 11
                         }, this),
                         draft.billingCycle === "custom" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5292,7 +5274,7 @@ function DashboardPage() {
                                     children: "Cycle Days"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2098,
+                                    lineNumber: 2072,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5305,17 +5287,17 @@ function DashboardPage() {
                                     placeholder: "np. 14"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2101,
+                                    lineNumber: 2075,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2097,
+                            lineNumber: 2071,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2111,
+                            lineNumber: 2085,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5325,7 +5307,7 @@ function DashboardPage() {
                                     children: "Kategoria"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2115,
+                                    lineNumber: 2089,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5338,13 +5320,13 @@ function DashboardPage() {
                                     placeholder: "np. Streaming / Narzędzia / Szkoła"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2116,
+                                    lineNumber: 2090,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2114,
+                            lineNumber: 2088,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5354,7 +5336,7 @@ function DashboardPage() {
                                     children: "Użycie"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2127,
+                                    lineNumber: 2101,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -5370,7 +5352,7 @@ function DashboardPage() {
                                             children: "Nie wiem"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2135,
+                                            lineNumber: 2109,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5378,7 +5360,7 @@ function DashboardPage() {
                                             children: "Często"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2136,
+                                            lineNumber: 2110,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5386,7 +5368,7 @@ function DashboardPage() {
                                             children: "Rzadko"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2137,
+                                            lineNumber: 2111,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -5394,19 +5376,19 @@ function DashboardPage() {
                                             children: "Nie używam"
                                         }, void 0, false, {
                                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                            lineNumber: 2138,
+                                            lineNumber: 2112,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2128,
+                                    lineNumber: 2102,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2126,
+                            lineNumber: 2100,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5424,19 +5406,19 @@ function DashboardPage() {
                                         className: "h-4 w-4 rounded border-zinc-300"
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2144,
+                                        lineNumber: 2118,
                                         columnNumber: 15
                                     }, this),
                                     "Aktywna subskrypcja"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2143,
+                                lineNumber: 2117,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2142,
+                            lineNumber: 2116,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5447,7 +5429,7 @@ function DashboardPage() {
                                     children: "Notatki (opcjonalnie)"
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2157,
+                                    lineNumber: 2131,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -5460,24 +5442,24 @@ function DashboardPage() {
                                     placeholder: "np. plan rodzinny, płatność kartą X, itp."
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2160,
+                                    lineNumber: 2134,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2156,
+                            lineNumber: 2130,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2019,
+                    lineNumber: 1993,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 1991,
+                lineNumber: 1965,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Modal, {
@@ -5500,7 +5482,7 @@ function DashboardPage() {
                             children: "Anuluj"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2179,
+                            lineNumber: 2153,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5510,13 +5492,13 @@ function DashboardPage() {
                             children: "Usuń"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2186,
+                            lineNumber: 2160,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2178,
+                    lineNumber: 2152,
                     columnNumber: 11
                 }, void 0),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5524,12 +5506,12 @@ function DashboardPage() {
                     children: "Usunięcie przeniesie rekord do „kosza” z opcją cofnięcia przez kilka sekund."
                 }, void 0, false, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2196,
+                    lineNumber: 2170,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2173,
+                lineNumber: 2147,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Modal, {
@@ -5556,7 +5538,7 @@ function DashboardPage() {
                             children: "Anuluj"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2216,
+                            lineNumber: 2190,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5566,7 +5548,7 @@ function DashboardPage() {
                             children: "Auto-merge duplikaty"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2231,
+                            lineNumber: 2205,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5576,7 +5558,7 @@ function DashboardPage() {
                             children: "Scal po ID"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2239,
+                            lineNumber: 2213,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5586,13 +5568,13 @@ function DashboardPage() {
                             children: "Zastąp listę"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2247,
+                            lineNumber: 2221,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2215,
+                    lineNumber: 2189,
                     columnNumber: 11
                 }, void 0),
                 children: [
@@ -5606,7 +5588,7 @@ function DashboardPage() {
                                 children: importModal.incoming.length
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2259,
+                                lineNumber: 2233,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -5614,7 +5596,7 @@ function DashboardPage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2257,
+                        lineNumber: 2231,
                         columnNumber: 9
                     }, this),
                     importModal.dupAgainstExisting.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5627,7 +5609,7 @@ function DashboardPage() {
                                 children: importModal.dupAgainstExisting.length
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2266,
+                                lineNumber: 2240,
                                 columnNumber: 13
                             }, this),
                             ". Najlepsza opcja:",
@@ -5637,14 +5619,14 @@ function DashboardPage() {
                                 children: "Auto-merge duplikaty"
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2270,
+                                lineNumber: 2244,
                                 columnNumber: 13
                             }, this),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2264,
+                        lineNumber: 2238,
                         columnNumber: 11
                     }, this) : null,
                     importModal.report.length ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5655,7 +5637,7 @@ function DashboardPage() {
                                 children: "Raport"
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2276,
+                                lineNumber: 2250,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5667,18 +5649,18 @@ function DashboardPage() {
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2279,
+                                        lineNumber: 2253,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2277,
+                                lineNumber: 2251,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2275,
+                        lineNumber: 2249,
                         columnNumber: 11
                     }, this) : null,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5686,13 +5668,13 @@ function DashboardPage() {
                         children: "„Scal po ID” nadpisze rekordy o tych samych ID. „Zastąp” ustawi listę dokładnie jak w pliku."
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2285,
+                        lineNumber: 2259,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2203,
+                lineNumber: 2177,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Modal, {
@@ -5714,7 +5696,7 @@ function DashboardPage() {
                             children: "Zostaw obie"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2305,
+                            lineNumber: 2279,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5724,13 +5706,13 @@ function DashboardPage() {
                             children: "Scal z wybraną"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2312,
+                            lineNumber: 2286,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2304,
+                    lineNumber: 2278,
                     columnNumber: 11
                 }, void 0),
                 children: [
@@ -5739,7 +5721,7 @@ function DashboardPage() {
                         children: "Nowa subskrypcja wygląda podobnie do istniejącej (nazwa + cena + waluta). Wybierz: scalić czy zostawić obie."
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2325,
+                        lineNumber: 2299,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5750,7 +5732,7 @@ function DashboardPage() {
                                 children: "Nowa"
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2331,
+                                lineNumber: 2305,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5758,7 +5740,7 @@ function DashboardPage() {
                                 children: dupeModal.candidate?.name
                             }, void 0, false, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2332,
+                                lineNumber: 2306,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5770,13 +5752,13 @@ function DashboardPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2335,
+                                lineNumber: 2309,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2330,
+                        lineNumber: 2304,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5791,7 +5773,7 @@ function DashboardPage() {
                                                 children: m.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2347,
+                                                lineNumber: 2321,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5803,13 +5785,13 @@ function DashboardPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2348,
+                                                lineNumber: 2322,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2346,
+                                        lineNumber: 2320,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5822,24 +5804,24 @@ function DashboardPage() {
                                                 }))
                                     }, void 0, false, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2352,
+                                        lineNumber: 2326,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, m.id, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2342,
+                                lineNumber: 2316,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2340,
+                        lineNumber: 2314,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2292,
+                lineNumber: 2266,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Modal, {
@@ -5855,12 +5837,12 @@ function DashboardPage() {
                         children: "Zamknij"
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2372,
+                        lineNumber: 2346,
                         columnNumber: 13
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2371,
+                    lineNumber: 2345,
                     columnNumber: 11
                 }, void 0),
                 children: [
@@ -5869,7 +5851,7 @@ function DashboardPage() {
                         children: "Profile rozdzielają dane w localStorage (subskrypcje, budżet, historia płatności)."
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2382,
+                        lineNumber: 2356,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5885,7 +5867,7 @@ function DashboardPage() {
                                                 children: p.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2394,
+                                                lineNumber: 2368,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5896,13 +5878,13 @@ function DashboardPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2395,
+                                                lineNumber: 2369,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2393,
+                                        lineNumber: 2367,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5915,7 +5897,7 @@ function DashboardPage() {
                                                 children: p.id === profileId ? "Aktywny" : "Przełącz"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2401,
+                                                lineNumber: 2375,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5931,24 +5913,24 @@ function DashboardPage() {
                                                 children: "Zmień nazwę"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                                lineNumber: 2414,
+                                                lineNumber: 2388,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                        lineNumber: 2400,
+                                        lineNumber: 2374,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, p.id, true, {
                                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                lineNumber: 2389,
+                                lineNumber: 2363,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2387,
+                        lineNumber: 2361,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5969,13 +5951,13 @@ function DashboardPage() {
                         children: "+ Dodaj profil"
                     }, void 0, false, {
                         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                        lineNumber: 2434,
+                        lineNumber: 2408,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2366,
+                lineNumber: 2340,
                 columnNumber: 7
             }, this),
             undo ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5994,7 +5976,7 @@ function DashboardPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2456,
+                                    lineNumber: 2430,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6002,13 +5984,13 @@ function DashboardPage() {
                                     children: "Możesz cofnąć przez chwilę."
                                 }, void 0, false, {
                                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                                    lineNumber: 2459,
+                                    lineNumber: 2433,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2455,
+                            lineNumber: 2429,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6018,18 +6000,18 @@ function DashboardPage() {
                             children: "Cofnij"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                            lineNumber: 2463,
+                            lineNumber: 2437,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2454,
+                    lineNumber: 2428,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2453,
+                lineNumber: 2427,
                 columnNumber: 9
             }, this) : null,
             toast ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6039,18 +6021,18 @@ function DashboardPage() {
                     children: toast
                 }, void 0, false, {
                     fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                    lineNumber: 2477,
+                    lineNumber: 2451,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-                lineNumber: 2476,
+                lineNumber: 2450,
                 columnNumber: 9
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "[project]/app/subskrypcja/SubManagerFull.tsx",
-        lineNumber: 1169,
+        lineNumber: 1171,
         columnNumber: 5
     }, this);
 }
@@ -6148,12 +6130,12 @@ function SubskrypcjaPage() {
                     children: banner
                 }, void 0, false, {
                     fileName: "[project]/app/subskrypcja/page.tsx",
-                    lineNumber: 57,
+                    lineNumber: 56,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/page.tsx",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 9
             }, this) : null,
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6165,36 +6147,36 @@ function SubskrypcjaPage() {
                             className: "h-5 w-40 animate-pulse rounded bg-zinc-200/70 dark:bg-white/10"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/page.tsx",
-                            lineNumber: 64,
+                            lineNumber: 63,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mt-4 h-4 w-full animate-pulse rounded bg-zinc-200/70 dark:bg-white/10"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/page.tsx",
-                            lineNumber: 65,
+                            lineNumber: 64,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mt-2 h-4 w-5/6 animate-pulse rounded bg-zinc-200/70 dark:bg-white/10"
                         }, void 0, false, {
                             fileName: "[project]/app/subskrypcja/page.tsx",
-                            lineNumber: 66,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/subskrypcja/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 62,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/page.tsx",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 9
             }, this) : hasAccess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$subskrypcja$2f$SubManagerFull$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/subskrypcja/page.tsx",
-                lineNumber: 70,
+                lineNumber: 69,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mx-auto w-full max-w-6xl px-4 py-8",
@@ -6202,18 +6184,18 @@ function SubskrypcjaPage() {
                     onActivated: ()=>void refresh()
                 }, void 0, false, {
                     fileName: "[project]/app/subskrypcja/page.tsx",
-                    lineNumber: 73,
+                    lineNumber: 72,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/subskrypcja/page.tsx",
-                lineNumber: 72,
+                lineNumber: 71,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/subskrypcja/page.tsx",
-        lineNumber: 54,
+        lineNumber: 53,
         columnNumber: 5
     }, this);
 }
