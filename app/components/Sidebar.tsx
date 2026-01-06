@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import {
   IconChat,
@@ -11,13 +11,15 @@ import {
   IconSubscription,
   IconUser,
   IconLock,
+  IconCalendar,
 } from "./icons";
 
 type NavItem = {
   label: string;
   href: string;
-  icon: (p: React.SVGProps<SVGSVGElement>) => JSX.Element;
+  icon: (p: React.SVGProps<SVGSVGElement>) => React.ReactElement;
   requiresAuth?: boolean;
+  section: "create" | "apps";
 };
 
 export default function Sidebar(props: { authenticated: boolean }) {
@@ -25,29 +27,29 @@ export default function Sidebar(props: { authenticated: boolean }) {
   const router = useRouter();
   const [q, setQ] = useState("");
 
-  const itemsCreate: NavItem[] = useMemo(
+  const allItems: NavItem[] = useMemo(
     () => [
-      { label: "Start", href: "/", icon: IconHome, requiresAuth: false },
-      { label: "Chat", href: "/chat", icon: IconChat, requiresAuth: true },
+      { label: "Start", href: "/", icon: IconHome, requiresAuth: false, section: "create" },
+      { label: "Chat", href: "/chat", icon: IconChat, requiresAuth: true, section: "create" },
+
+      { label: "Subskrypcja", href: "/subskrypcja", icon: IconSubscription, requiresAuth: true, section: "apps" },
+      { label: "Kalendarz", href: "/kalendarz", icon: IconCalendar, requiresAuth: true, section: "apps" },
+      { label: "Profil", href: "/profile", icon: IconUser, requiresAuth: true, section: "apps" },
     ],
     []
   );
-
-  const itemsApps: NavItem[] = useMemo(
-    () => [
-      { label: "Subskrypcja", href: "/subskrypcja", icon: IconSubscription, requiresAuth: true },
-      { label: "Profil", href: "/profile", icon: IconUser, requiresAuth: true },
-    ],
-    []
-  );
-
-  const all = useMemo(() => [...itemsCreate, ...itemsApps], [itemsCreate, itemsApps]);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
-    if (!needle) return all;
-    return all.filter((x) => x.label.toLowerCase().includes(needle));
-  }, [q, all]);
+    if (!needle) return allItems;
+    return allItems.filter((x) => x.label.toLowerCase().includes(needle));
+  }, [q, allItems]);
+
+  function isActive(href: string) {
+    if (!pathname) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  }
 
   function go(item: NavItem) {
     if (item.requiresAuth && !props.authenticated) {
@@ -58,7 +60,7 @@ export default function Sidebar(props: { authenticated: boolean }) {
   }
 
   function Row({ item }: { item: NavItem }) {
-    const active = pathname === item.href || (item.href !== "/" && pathname?.startsWith(item.href));
+    const active = isActive(item.href);
     const locked = item.requiresAuth && !props.authenticated;
 
     return (
@@ -67,9 +69,7 @@ export default function Sidebar(props: { authenticated: boolean }) {
         onClick={() => go(item)}
         className={
           "group flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-semibold " +
-          (active
-            ? "bg-white/10 text-white"
-            : "text-white/80 hover:bg-white/5 hover:text-white") +
+          (active ? "bg-white/10 text-white" : "text-white/80 hover:bg-white/5 hover:text-white") +
           (locked ? " opacity-70" : "")
         }
       >
@@ -108,7 +108,7 @@ export default function Sidebar(props: { authenticated: boolean }) {
         <div className="px-2 text-xs font-black tracking-wide text-white/50">Tworzenie</div>
         <div className="mt-2 space-y-1">
           {filtered
-            .filter((x) => itemsCreate.some((y) => y.href === x.href))
+            .filter((x) => x.section === "create")
             .map((item) => (
               <Row key={item.href} item={item} />
             ))}
@@ -119,7 +119,7 @@ export default function Sidebar(props: { authenticated: boolean }) {
         <div className="px-2 text-xs font-black tracking-wide text-white/50">Aplikacje</div>
         <div className="mt-2 space-y-1">
           {filtered
-            .filter((x) => itemsApps.some((y) => y.href === x.href))
+            .filter((x) => x.section === "apps")
             .map((item) => (
               <Row key={item.href} item={item} />
             ))}

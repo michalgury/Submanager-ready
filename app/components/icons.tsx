@@ -54,6 +54,24 @@ export function IconSubscription(props: P) {
   );
 }
 
+export function IconCalendar(props: P) {
+  // Ikonka kalendarza (do widoku odnowień/płatności subskrypcji)
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
+      <path d="M7 3v3" />
+      <path d="M17 3v3" />
+      <path d="M4 8h16" />
+      <path d="M6.5 5h11A2.5 2.5 0 0 1 20 7.5v12A2.5 2.5 0 0 1 17.5 22h-11A2.5 2.5 0 0 1 4 19.5v-12A2.5 2.5 0 0 1 6.5 5Z" />
+      <path d="M8 12h.01" />
+      <path d="M12 12h.01" />
+      <path d="M16 12h.01" />
+      <path d="M8 16h.01" />
+      <path d="M12 16h.01" />
+      <path d="M16 16h.01" />
+    </svg>
+  );
+}
+
 export function IconUser(props: P) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
